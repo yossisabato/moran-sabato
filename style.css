@@ -13,6 +13,8 @@ body {
     padding: 20px;
     background-color: #FAF3E0;
     color: #4A4A4A;
+    direction: rtl;
+    text-align: right;
 }
 
 header, footer {
@@ -39,7 +41,8 @@ nav ul {
 
 nav ul li {
     display: inline;
-    margin-right: 15px;
+    margin-left: 15px;
+    margin-right: 0;
 }
 
 nav ul li a {
@@ -73,6 +76,7 @@ main {
     display: flex;
     gap: 20px;
     justify-content: center;
+    text-align: right;
 }
 
 .service {
@@ -117,6 +121,7 @@ label {
     margin-top: 10px;
     font-weight: bold;
     color: #4A4A4A;
+    text-align: right;
 }
 
 input, textarea {
@@ -126,6 +131,7 @@ input, textarea {
     border: 1px solid #D4A59A;
     border-radius: 4px;
     background-color: #FAF3E0;
+    text-align: right;
 }
 
 button {
@@ -137,6 +143,8 @@ button {
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s;
+    margin-left: auto;
+    margin-right: 0;
 }
 
 button:hover {
