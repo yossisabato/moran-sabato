@@ -6,78 +6,35 @@ Author: Your Name
 Author URI: https://yourwebsite.com
 Version: 1.0
 */
-/* Basic Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+/* General Styling */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     padding: 20px;
-    color: #333;
+    background-color: #FAF3E0;
+    color: #4A4A4A;
 }
 
-header {
-    text-align: center;
+header, footer {
+    background-color: #F2E5D5;
     padding: 10px 0;
+    color: #4A4A4A;
+    text-align: center;
 }
 
+/* Header Styles */
 header h1 a {
     text-decoration: none;
-    color: #333;
+    color: #4A4A4A;
 }
 
 nav {
     margin: 15px 0;
-    text-align: center;
 }
-/* Home Page */
-.services {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-}
-
-.service {
-    width: 30%;
-    padding: 15px;
-    background: #f4f4f4;
-    text-align: center;
-    border-radius: 8px;
-}
-
-.service h3 {
-    margin-top: 0;
-}
-
-.service a {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 10px 15px;
-    background: #333;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 4px;
-}
-
-.service a:hover {
-    background: #555;
-}
-
-/* Service Pages */
-.service-content {
-    padding: 20px;
-    background: #f9f9f9;
-    border-radius: 8px;
-    margin-top: 15px;
-}
-
 
 nav ul {
     list-style: none;
+    padding: 0;
 }
 
 nav ul li {
@@ -87,22 +44,68 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #333;
+    color: #4A4A4A;
 }
 
+nav ul li a:hover {
+    color: #D4A59A; /* Accent color */
+}
+
+/* Footer Styles */
 footer {
-    text-align: center;
     margin-top: 20px;
-    padding: 10px 0;
-    background: #f4f4f4;
-    color: #333;
+    padding: 15px 0;
+    font-size: 0.9em;
 }
 
+/* Main Content Styles */
 main {
     max-width: 800px;
     margin: 20px auto;
     padding: 20px;
+    background-color: #FFF;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
+
+/* Services Section (Home Page) */
+.services {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.service {
+    width: 30%;
+    padding: 15px;
+    background: #FFF;
+    border: 1px solid #F2E5D5;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.service h3 {
+    margin-top: 0;
+    color: #4A4A4A;
+}
+
+.service a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #A3B9A4;
+    color: #FFF;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.service a:hover {
+    background-color: #D4A59A; /* Accent color */
+}
+
+/* Contact Form */
 form {
     display: flex;
     flex-direction: column;
@@ -112,26 +115,40 @@ form {
 
 label {
     margin-top: 10px;
+    font-weight: bold;
+    color: #4A4A4A;
 }
 
 input, textarea {
     width: 100%;
-    padding: 8px;
+    padding: 10px;
     margin-top: 5px;
-    border: 1px solid #ddd;
+    border: 1px solid #D4A59A;
     border-radius: 4px;
+    background-color: #FAF3E0;
 }
 
 button {
     margin-top: 15px;
     padding: 10px;
-    background-color: #333;
-    color: #fff;
+    background-color: #A3B9A4;
+    color: #FFF;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 button:hover {
-    background-color: #555;
+    background-color: #D4A59A;
+}
+
+/* Additional Styling for Consistency */
+h1, h2, h3 {
+    color: #4A4A4A;
+    font-family: Arial, sans-serif;
+}
+
+p {
+    color: #4A4A4A;
 }
