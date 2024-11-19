@@ -76,17 +76,19 @@ main {
     display: flex;
     gap: 20px;
     justify-content: center;
+    flex-wrap: wrap; /* This will allow columns to wrap on smaller screens */
     text-align: right;
 }
 
 .service {
-    width: 30%;
-    padding: 15px;
+    width: 45%; /* Adjust this to control the width of each column */
+    padding: 20px;
     background: #FFF;
     border: 1px solid #F2E5D5;
     border-radius: 8px;
     text-align: center;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
 }
 
 .service h3 {
