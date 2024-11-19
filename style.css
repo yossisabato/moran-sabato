@@ -162,3 +162,9 @@ h1, h2, h3 {
 p {
     color: #4A4A4A;
 }
+@media (max-width: 768px) {
+    .service {
+        width: 100%;
+    }
+}
+
