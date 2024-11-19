@@ -6,7 +6,7 @@
     </section>
 
     <section class="services">
-        <h2>Our Services</h2>
+        <h2>הטיפולים שלנו</h2>
         <div class="service">
             <h3>טיפול מיני</h3>
             <p>טיפול מיני מתרחש במתכונת אישית או זוגית במטרה להביא לשיפור בתפקוד המיני. </p>
