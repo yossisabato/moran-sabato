@@ -32,7 +32,13 @@
     max-width: 800px; /* Restrict width for readability */
     margin-bottom: 40px; /* Add spacing below the image section */
 }
-
+/* Intro Section Styling 
+.intro {
+    padding: 40px; 
+    margin: 20px auto;
+    max-width: 800px; 
+}
+*/
 .intro + .intro-image {
     margin-top: 10px; /* Reduce space between the intro and the image */
 }
@@ -48,11 +54,13 @@
     margin-bottom: 20px;
     color: #4A4A4A;
 }
-
 .intro-content p {
     font-size: 1.2rem;
     line-height: 1.8;
     color: #4A4A4A;
+    margin-top: 10px; /* Add a bit of spacing above text */
+    margin-bottom: 10px; /* Reduce spacing below text */
+    text-align: right; /* Align text to the right */
 }
 
 .intro-image {
@@ -74,16 +82,15 @@
     height: auto; /* Maintain aspect ratio */
     object-fit: cover; /* Ensure the image scales nicely */
 }
+
+/* Heading Styling */
 .intro h1 {
     margin-top: 5px; /* Reduce space above the heading */
-    margin-bottom: 5px; /* Reduce space below the heading */
-    font-size: 2.4rem; /* Slightly increase font size for visibility */
+    margin-bottom: 5px; /* 15 Reduce space below the heading */
+    font-size: 2.4rem; /* 2 Slightly increase font size for visibility */
+    text-align: center; /* Center-align the text */
 }
-.intro-content p {
-    margin-top: 10px; /* Add a bit of spacing above text */
-    margin-bottom: 10px; /* Reduce spacing below text */
-    text-align: right; /* Align text to the right */
-}
+
 /* Responsive Adjustments */
 @media (max-width: 768px) {
     .intro {
@@ -103,13 +110,17 @@
 }
 
 /* Main Content */
+/* Main Content Background */
 main {
+    background-color: #FDF6E3; /* Soft pastel beige */
+    border-radius: 8px; /* 10 Keep the rounded corners */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    padding: 20px; /* Maintain padding */
+    background: linear-gradient(135deg, #FDF6E3, #FAEDE3); /* Soft gradient */
     max-width: 1200px; /* Keep the content centered */
     margin: 0 auto;
-    padding: 20px;
     background-color: #FFF;
     border-radius: 8px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Footer */
@@ -125,6 +136,8 @@ footer {
 body {
     background-color: #FAF3E0; /* Warm pastel background */
     color: #4A4A4A; /* Neutral dark gray text */
+    direction: rtl; /* Set the text direction to right-to-left */
+    background: linear-gradient(135deg, #FAF3E0, #FFF8E1);
 }
 
 a {
@@ -134,21 +147,6 @@ a {
 
 a:hover {
     color: #D4A59A; /* Light pastel accent on hover */
-}
-
-/* Restore Section Background */
-main {
-    background-color: #FFF; /* White background for main content */
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-}
-
-/* Footer */
-footer {
-    background-color: #F2E5D5;
-    color: #4A4A4A;
-    text-align: center;
-    padding: 15px 0;
 }
 
 /* Restore H3 Styles */
@@ -163,9 +161,17 @@ h3 {
 /* Service Section H3 Styling */
 .service h3 {
     font-size: 1.8rem; /* Match the rest of the site */
-    color: #4A4A4A; /* Neutral dark gray */
+    font-weight: bold; /* Bold text for emphasis */
+    margin: 0; /* Reset margins for better box alignment */
+    padding: 10px ; /* Add padding inside the box */
+    background-color: #e8f8ff; /* Light pastel background */
+    border: 1px solid #D4A59A; /* Subtle border for the box */
+    border-radius: 8px; /* Rounded corners */
+    color: #4A4A4A; /* Neutral dark gray text color */    
     margin-bottom: 10px; /* Space below heading */
     text-align: center; /* Center-align for consistency */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Add subtle shadow for depth */
+    display: inline-block; /* Keeps the box limited to the heading width */
 }
 
 /* Paragraph Alignment */
@@ -182,29 +188,9 @@ h1, h2, h3 {
     text-align: center; /* Keep headlines centered */
 }
 
-/* Additional Styling for RTL Languages */
-body {
-    direction: rtl; /* Set the text direction to right-to-left */
-}
-
-.service h3 {
-    text-align: center; /* Centers the heading text */
-    font-size: 1.8rem; /* Adjust font size */
-    font-weight: bold; /* Bold text for emphasis */
-    margin: 0; /* Reset margins for better box alignment */
-    padding: 10px 15px; /* Add padding inside the box */
-    background-color: #F2E5D5; /* Light pastel background */
-    border: 1px solid #D4A59A; /* Subtle border for the box */
-    border-radius: 8px; /* Rounded corners */
-    color: #4A4A4A; /* Neutral dark gray text color */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Add subtle shadow for depth */
-    display: inline-block; /* Keeps the box limited to the heading width */
-    margin-bottom: 15px; /* Add spacing below the box */
-}
-
 /* Styling for the Service Boxes */
 .service {
-    background-color: #FFF; /* White background for the box */
+    background-color: #EFF7FC; /* White background for the box */
     border: 1px solid #D4A59A; /* Subtle border for the box */
     border-radius: 10px; /* Rounded corners for the box */
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Add subtle shadow for depth */
@@ -212,14 +198,6 @@ body {
     margin: 15px auto; /* Space between the boxes and center-align */
     width: 80%; /* Adjust width for better layout */
     text-align: center; /* Center-align the text and content inside */
-}
-
-/* Styling for <h3> in the Service Boxes */
-.service h3 {
-    font-size: 1.8rem; /* Adjust font size for heading */
-    font-weight: bold; /* Bold text for emphasis */
-    margin-bottom: 10px; /* Space below the heading */
-    color: #4A4A4A; /* Neutral dark gray */
 }
 
 /* Styling for <p> in the Service Boxes */
@@ -279,19 +257,6 @@ body {
 .cta-button:hover {
     background: #D4A59A;
 }
-/* General Background Styling */
-body {
-    background-color: #FAF3E0; /* Light beige background */
-    color: #4A4A4A; /* Neutral dark gray text */
-}
-
-/* Background for Main Content */
-main {
-    background-color: #FFF; /* Keep the main content white for contrast */
-    border-radius: 10px; /* Rounded corners for a softer look */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    padding: 20px; /* Add padding inside */
-}
 
 /* Background for Header and Footer */
 header, footer {
@@ -299,77 +264,12 @@ header, footer {
     color: #4A4A4A; /* Neutral text color */
 }
 
-/* Additional Styling for Sections */
-section {
-    margin-bottom: 30px; /* Add spacing between sections */
-}
-body {
-    background: linear-gradient(135deg, #FAF3E0, #FCEFEF);
-}
-/* Main Content Background */
-main {
-    background-color: #FDF6E3; /* Soft pastel beige */
-    border-radius: 10px; /* Keep the rounded corners */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    padding: 20px; /* Maintain padding */
-}
-
-/* Optional Gradient for Content Area */
-main {
-    background: linear-gradient(135deg, #FDF6E3, #FAEDE3); /* Soft gradient */
-}
-
-/* Header and Footer Background */
-header, footer {
-    background-color: #F2E5D5; /* Subtle pastel color to match */
-}
-
 /* Contact and Services Sections (if needed) */
 section {
+    margin-bottom: 30px; /* Add spacing between sections */
     background-color: #FAF3E0; /* Light pastel for consistency */
     border-radius: 10px;
     padding: 20px;
-}
-/* Background for Service Boxes */
-.service {
-    background-color: #EFF7FC; /* Soft pastel beige */
-    border: 1px solid #D4A59A; /* Subtle border for separation */
-    border-radius: 10px; /* Rounded corners for the boxes */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
-    padding: 20px; /* Add space inside the box */
-    margin: 15px auto; /* Add spacing and center-align */
-    text-align: center; /* Center-align content inside */
-}
-
-/* Background for Box Headings */
-.service h3 {
-    background-color: #e8f8ff; /* Light pastel for the heading background */
-    padding: 10px;
-    border-radius: 8px;
-    display: inline-block; /* Keeps heading inside a limited box */
-    margin-bottom: 10px;
-    color: #4A4A4A; /* Neutral dark text color */
-}
-/* Intro Section Styling */
-.intro {
-    display: flex; /* Use Flexbox for layout */
-    flex-direction: column; /* Stack items vertically */
-    align-items: center; /* Center items horizontally */
-    justify-content: center; /* Center items vertically */
-    padding: 40px; /* Add padding around the section */
-    background-color: #FDF6E3; /* Soft pastel background */
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
-    margin: 20px auto; /* Center the section and add spacing */
-    max-width: 800px; /* Restrict width for readability */
-}
-
-/* Heading Styling */
-.intro h1 {
-    font-size: 2rem; /* Adjust font size for visibility */
-    color: #4A4A4A; /* Neutral dark gray */
-    margin-bottom: 15px; /* Add space below the heading */
-    text-align: center; /* Center-align the text */
 }
 
 /* Paragraph Styling */
@@ -379,9 +279,4 @@ section {
     color: #4A4A4A; /* Neutral dark gray */
     text-align: center; /* Center-align text */
     margin-bottom: 20px; /* Add space below the paragraph */
-}
-
-/* Background Enhancements */
-body {
-    background: linear-gradient(135deg, #FAF3E0, #FFF8E1); /* Add a soft gradient */
 }
