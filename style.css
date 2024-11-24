@@ -1,3 +1,4 @@
+
 /* Logo Styling */
 .site-logo {
     text-align: center; /* Center the logo */
@@ -16,8 +17,7 @@
 
 .site-logo img:hover {
     transform: scale(1.08); /* Slightly more zoom */
-    filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.2)); /* Enhanced shadow */
-}
+    filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.2)); /* Enhanced shadow */}
 
 /* Intro Section */
 .intro {
@@ -25,8 +25,8 @@
     flex-direction: column; /* Stack items vertically */
     align-items: center; /* Center items horizontally */
     justify-content: center; /* Center items vertically */
-    padding: 20px; /* Increase padding for better layout */
-    background: linear-gradient(135deg, #FDF6E3, #FAEDE3); /* Smooth gradient */
+    padding: 20px; /* Reduce padding around the section */
+    background: linear-gradient(135deg, #FDF6E3, #FAEDE3); /* Smooth gradient */    
     border-radius: 10px; /* Rounded corners */
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
     margin: 15px auto; /* Reduce spacing above and below */
@@ -34,20 +34,70 @@
     margin-bottom: 40px; /* Add spacing below the image section */
 }
 
+.intro + .intro-image {
+    margin-top: 10px; /* Reduce space between the intro and the image */
+}
+
+.intro-content {
+    flex: 1; /* Content takes up equal space */
+    text-align: center; /* Center-align text inside the intro */
+    padding: 10px; /* Reduce padding around the text */
+}
+
 .intro-content h2 {
-    font-size: 2.4rem; /* Slightly larger font size */
+    font-size: 2.4rem;
     margin-bottom: 20px;
     color: #4A4A4A;
 }
+.intro-content p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #4A4A4A;
+    margin-top: 10px; /* Add a bit of spacing above text */
+    margin-bottom: 10px; /* Reduce spacing below text */
+    text-align: right; /* Align text to the right */
+}
+
+.intro-image {
+    display: flex; /* Use Flexbox for alignment */
+    justify-content: center; /* Center the image horizontally */
+    margin: 10px auto; /* Reduce space above and below */
+    max-width: 800px; /* Restrict the maximum width */
+    border-radius: 10px; /* Add rounded corners */
+    overflow: hidden; /* Ensure rounded corners apply to the image */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+}
+
+.intro-image img {
+    max-height: 70vh; /* Prevent the image from being too tall */
+    max-width: 100%; /* Keep the image responsive */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Add a shadow for depth */
+    width: 100%; /* Make the image responsive */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensure the image scales nicely */
+}
+
+/* Heading Styling */
+.intro h1 {
+    margin-top: 5px; /* Reduce space above the heading */
+    margin-bottom: 5px; /* 15 Reduce space below the heading */
+    font-size: 2.4rem; /* 2 Slightly increase font size for visibility */
+    text-align: center; /* Center-align the text */
+}
 
 /* Main Content */
+/* Main Content Background */
 main {
     background: linear-gradient(135deg, #FDF6E3, #FAEDE3); /* Soft gradient */
     border-radius: 8px; /* Rounded corners */
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
     padding: 20px; /* Maintain padding */
+    background: linear-gradient(135deg, #FDF6E3, #FAEDE3); /* Soft gradient */
     max-width: 1200px; /* Keep the content centered */
     margin: 0 auto;
+    background-color: #FFF;
+    border-radius: 8px;
 }
 
 /* Footer */
@@ -61,15 +111,255 @@ footer {
 
 /* Restore General Colors */
 body {
-    background: linear-gradient(135deg, #FAF3E0, #FFF8E1); /* Warm gradient background */
+    background: linear-gradient(135deg, #FAF3E0, #FFF8E1); /* Warm gradient background  */ 
     color: #4A4A4A; /* Neutral dark gray text */
-    direction: rtl; /* Right-to-left layout */
+    direction: rtl; /* Set the text direction to right-to-left */
+    background: linear-gradient(135deg, #FAF3E0, #FFF8E1);
+}
+
+a {
+    color: #A3B9A4; /* Soft green for links */
+    text-decoration: none; /* Remove underline for links */
+}
+
+a:hover {
+    color: #D4A59A; /* Light pastel accent on hover */
+}
+
+/* Restore H3 Styles */
+h3 {
+    font-size: 1.8rem; /* Larger size for emphasis */
+    font-weight: bold; /* Bold text */
+    color: #4A4A4A; /* Neutral dark gray */
+    text-align: center; /* Center-align the heading */
+    margin-bottom: 15px; /* Space below the heading */
+}
+
+/* Service Section H3 Styling */
+.service h3 {
+    font-size: 1.8rem; /* Match the rest of the site */
+    font-weight: bold; /* Bold text for emphasis */
+    margin: 0; /* Reset margins for better box alignment */
+    padding: 10px ; /* Add padding inside the box */
+    background-color: #e8f8ff; /* Light pastel background */
+    border: 1px solid #D4A59A; /* Subtle border for the box */
+    border-radius: 8px; /* Rounded corners */
+    color: #4A4A4A; /* Neutral dark gray text color */    
+    margin-bottom: 10px; /* Space below heading */
+    text-align: center; /* Center-align for consistency */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Add subtle shadow for depth */
+    display: inline-block; /* Keeps the box limited to the heading width */
+}
+
+/* Paragraph Alignment */
+p {
+    text-align: right; /* Align all paragraphs to the right */
+    font-size: 1.1rem; /* Ensure a readable font size */
+    line-height: 1.6; /* Improve readability */
+    color: #4A4A4A; /* Neutral dark gray text color */
+    margin-bottom: 15px; /* Add spacing below each paragraph */
+}
+
+/* Center Alignment for Headlines */
+h1, h2, h3 {
+    text-align: center; /* Keep headlines centered */
 }
 
 /* Styling for the Service Boxes */
 .service {
+    position: relative; /* Keep relative for the ::before pseudo-element */
+    background: none; /* Remove any existing background */
+    display: flex; /* Flexbox to align content */
+    align-items: center; /* Vertical alignment */
+    justify-content: flex-end; /* Move text to the right */
+    height: 300px; /* Adjust height as needed */
+    padding: 20px; /* Spacing for text */
+    overflow: hidden; /* Ensure no overflow issues */
+}
+
+/* Text Container */
+.service .text-container {
+    flex: 1; /* Use remaining space for text */
+    padding: 20px; /* Add spacing around text */
+    display: flex;
+    flex-direction: column; /* Stack h3 and p vertically */
+    justify-content: center; /* Center-align vertically */
+    align-items: flex-end; /* Align to the right */
+}
+
+/* Background Image Styling */
+.service::before {
+    content: ''; /* Keeps the pseudo-element */
+    position: absolute;
+    top: 0;
+    right: 0; /* Align the background image to the right */
+    width: 100%; /* Change width to full box width */
+    height: 100%; /* Full height of the box */
+    background-image: url('YOUR_IMAGE_URL'); /* Add the right image */
+    background-size: cover;
+    background-position: center;
+    z-index: 1; /* Keep it beneath the text */
+    filter: brightness(0.6); /* Optional: Adjust contrast */
+    border-radius: 10px; /* Optional: Add rounded corners */
+}
+
+/* Styling for <p> in the Service Boxes */
+.service p {
+    font-size: 1.1rem; /* Slightly smaller text for paragraphs */
+    line-height: 1.6; /* Improve readability */
+    color: #4A4A4A; /* Neutral dark gray */
+    margin-bottom: 15px; /* Add spacing below the paragraph */
+}
+
+/* Styling for Learn More Links Inside the Box */
+.service a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #D4A59A; /* Accent color */
+    color: #FFF; /* White text */
+    text-decoration: none; /* Remove underline */
+    border-radius: 5px; /* Rounded corners for buttons */
+    transition: background-color 0.3s ease;; /* Add hover effect */
+}
+
+.cta {
+    text-align: center;
+    padding: 30px;
+    background: #F2E5D5;
+    border-radius: 10px;
+    margin-top: 40px;
+}
+
+.cta h2 {
+    font-size: 1.8rem;
+    margin-bottom: 40px;
+    color: #4A4A4A;
+}
+
+.cta p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #A3B9A4;
+    color: #FFF;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background: #D4A59A;
+}
+
+/* Background for Header and Footer */
+header, footer {
+    background-color: #F2E5D5; /* Light pastel for header and footer */
+    color: #4A4A4A; /* Neutral text color */
+}
+
+/* Contact and Services Sections (if needed) */
+section {
+    margin-bottom: 30px; /* Add spacing between sections */
+    background-color: #FAF3E0; /* Light pastel for consistency */
+    border-radius: 10px;
+    padding: 20px;
+}
+
+/* Paragraph Styling */
+.intro p {
+    font-size: 1.2rem; /* Slightly larger font size */
+    line-height: 1.6; /* Improve readability */
+    color: #4A4A4A; /* Neutral dark gray */
+    text-align: center; /* Center-align text */
+    margin-bottom: 20px; /* Add space below the paragraph */
+}
+/* Service Boxes Backgrounds */
+
+/* Specific Backgrounds for Each Service */
+.service:nth-child(1)::before {
+    background-image: url('http://moransabato.local/wp-content/uploads/2024/11/couple-bg-1-1.jpg'); /* Replace with URL */
+}
+.service:nth-child(2)::before {
+    background-image: url('URL_FOR_FAMILY_THERAPY_IMAGE'); /* Replace with URL */
+}
+.service:nth-child(3)::before {
+    background-image: url('URL_FOR_TRAUMA_THERAPY_IMAGE'); /* Replace with URL */
+}
+.service:nth-child(4)::before {
+    background-image: url('URL_FOR_SEXUAL_THERAPY_IMAGE'); /* Replace with URL */
+}
+
+.service:nth-child(1) {
+    background-image: url('http://moransabato.local/wp-content/uploads/2024/11/couple-bg-1-1.jpg'); /* Replace with the URL for Couples Therapy */
+    background-size: cover;
+    background-position: center;
+    color: #ffffff; /* Ensure text is visible on the background */
+}
+
+.service:nth-child(2) {
+    background-image: url('URL_FOR_FAMILY_THERAPY_IMAGE'); /* Replace with the URL for Family Therapy */
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+}
+
+.service:nth-child(3) {
+    background-image: url('URL_FOR_TRAUMA_THERAPY_IMAGE'); /* Replace with the URL for Trauma Therapy */
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+}
+
+.service:nth-child(4) {
+    background-image: url('URL_FOR_SEXUAL_THERAPY_IMAGE'); /* Replace with the URL for Sexual Therapy */
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+}
+
+/* Add Padding and Background Color for Text Visibility */
+/* Text Styling */
+.service h3,
+.service p,
+.service a {
+    position: relative;
+    z-index: 2; /* Ensure text appears above the background */
+    color: #4A4A4A; /* Neutral dark text for readability */
+    background-color: rgba(255, 255, 255, 0.8); /* Add light background for readability */
+    text-align: right; /* Align text to the right */
+    padding: 10px;
+    width: 45%; /* Restrict text width */
+}
+
+.service p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+.service a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #D4A59A; /* Accent color for the button */
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.service a:hover {
+    background-color: #A3B9A4; /* Slight hover effect */
+}
+
+.service {
     display: flex; /* Side-by-side layout */
-    flex-direction: row-reverse; /* Image on the left, text on the right */
+    flex-direction: row-reverse; /* Flip the order: image on the left, text on the right */
     align-items: center; /* Vertically center the content */
     justify-content: space-between; /* Add space between sections */
     padding: 0;
@@ -77,12 +367,11 @@ body {
     width: 90%; /* Adjust width */
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     height: 300px;
     background-color: #F7F2EC; /* Neutral background */
 }
 
-/* Left Image Section */
 .service .image-section {
     width: 50%; /* Half width */
     height: 100%; /* Full height */
@@ -91,7 +380,54 @@ body {
     border-radius: 10px 0 0 10px; /* Rounded corners for the left */
 }
 
-/* Right Text Section */
+.service .text-section {
+    width: 50%; /* Half width */
+    padding: 20px;
+    background-color: #FDF6E3; /* Light background */
+    display: flex; /* Enable Flexbox */
+    flex-direction: column; /* Stack items */
+    justify-content: center; /* Center content vertically */
+    text-align: right; /* Align text to the right */
+    border-radius: 0 10px 10px 0; /* Rounded corners for the right */
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.service .text-section h3 {
+    margin: 0 0 10px;
+    font-size: 1.8rem; /* Adjusted size */
+    font-weight: bold;
+    color: #4A4A4A; /* Neutral text color */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Add shadow for better visibility */
+    text-align: right;
+}
+
+.service .text-section p {
+    margin: 0 0 20px; /* Add space below the paragraph */
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #4A4A4A; /* Neutral color */
+    text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.1); /* Add slight text shadow */
+}
+
+.service .text-section a {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: #D4A59A; /* Accent color */
+    color: #FFF;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.1rem;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Add button shadow */
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.service .text-section a:hover {
+    background-color: #A3B9A4; /* Lighter green on hover */
+}
+
 .service .text-section {
     width: 50%; /* Half width */
     padding: 20px;
@@ -101,63 +437,94 @@ body {
     justify-content: center; /* Center content vertically */
     text-align: right; /* Align text to the right */
     border-radius: 15px; /* Softer rounded corners */
-    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1); /* Elegant shadow */
-    border: 1px solid #E0E0E0; /* Light border */
-    margin: 10px; /* Add spacing */
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1); /* Elegant shadow for depth */
+    border: 1px solid #E0E0E0; /* Light border for refinement */
+    margin: 10px; /* Add spacing around the box */
 }
 
-/* Text Styling in Service Boxes */
 .service .text-section h3 {
     margin: 0 0 10px;
-    font-size: 2rem; /* Prominent font size */
-    font-weight: bold;
-    color: #4A4A4A; /* Neutral text color */
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    font-size: 2rem; /* Slightly larger font for prominence */
+    font-weight: bold; /* Emphasize the heading */
+    color: #4A4A4A; /* Neutral dark text */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Soft shadow for better readability */
     text-align: right;
-    border-bottom: 2px solid #D4A59A; /* Accent underline */
-    padding-bottom: 5px; /* Space under the heading */
+    border-bottom: 2px solid #D4A59A; /* Subtle underline for separation */
+    padding-bottom: 5px; /* Add spacing under the heading */
 }
 
 .service .text-section p {
-    margin: 15px 0; /* Space above and below */
+    margin: 15px 0; /* Add space above and below */
     font-size: 1.2rem; /* Ensure readability */
     line-height: 1.8; /* Improve line spacing */
-    color: #6C6C6C; /* Softer text color */
-    text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    color: #6C6C6C; /* Softer text color for paragraphs */
+    text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.1); /* Subtle text shadow */
 }
 
-/* CTA Button */
 .service .text-section a {
     display: inline-block;
     padding: 12px 20px;
     background-color: #D4A59A; /* Accent color */
-    color: #FFF; /* White text */
-    text-decoration: none;
-    border-radius: 30px; /* Rounded button */
+    color: #efffe8; /* White text for contrast */
+    text-decoration: none; /* Remove underline */
+    border-radius: 30px; /* Pill-shaped button */
+    text-align: center;
+    font-weight: bold;
     font-size: 1.1rem; /* Ensure readability */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle button shadow */
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle button shadow */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Add hover effects */
+    margin-top: 15px;
 }
 
 .service .text-section a:hover {
     background-color: #A3B9A4; /* Softer hover color */
-    transform: scale(1.05); /* Slight zoom */
+    transform: scale(1.05); /* Slight zoom effect on hover */
 }
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .intro {
+        flex-direction: column; /* Stack text and image vertically */
+        height: auto; /* Allow height to adjust naturally */
+    }
+
+    .intro-content {
+        text-align: center; /* Center text on smaller screens */
+        padding: 10px;
+    }
+
+    .intro-image img {
+        max-height: 50vh; /* Scale down image for smaller screens */
+        width: auto; /* Maintain aspect ratio */
+    }
     .service {
         flex-direction: column; /* Stack image and text vertically */
         height: auto;
     }
-
+    .service::before {
+        width: 100%; /* Full width background for small screens */
+        height: 50%; /* Reduce height */
+        display: none; /* Disable the left image */
+    }
+    
     .service .image-section,
     .service .text-section {
         width: 100%; /* Full width for smaller screens */
         border-radius: 10px; /* Rounded corners */
     }
-
+    
     .service .text-section {
         text-align: center; /* Center-align for smaller screens */
+    }
+    .service h3,
+    .service p,
+    .service a {
+        width: 100%; /* Full width text for small screens */
+        text-align: center; /* Center-align text */
+    }
+    .service .text-container {
+        align-items: center; /* Center-align text */
+        text-align: center; /* Center-align text */
     }
 }
