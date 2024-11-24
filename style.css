@@ -161,3 +161,17 @@ body {
     direction: rtl; /* Set the text direction to right-to-left */
 }
 
+.service h3 {
+    text-align: center; /* Centers the heading text */
+    font-size: 1.8rem; /* Adjust font size */
+    font-weight: bold; /* Bold text for emphasis */
+    margin: 0; /* Reset margins for better box alignment */
+    padding: 10px 15px; /* Add padding inside the box */
+    background-color: #F2E5D5; /* Light pastel background */
+    border: 1px solid #D4A59A; /* Subtle border for the box */
+    border-radius: 8px; /* Rounded corners */
+    color: #4A4A4A; /* Neutral dark gray text color */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Add subtle shadow for depth */
+    display: inline-block; /* Keeps the box limited to the heading width */
+    margin-bottom: 15px; /* Add spacing below the box */
+}
