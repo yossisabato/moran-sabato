@@ -33,19 +33,25 @@
     </div>
 
         <div class="service">
+            <div class="image-section" style="background-image: url('http://moransabato.local/wp-content/uploads/2024/11/png-clipart-genealogy-family-constellations-family-therapy-psychogenealogie-family-people-cartoon-thumbnail.png');"></div>
+            <div class="text-section">
             <h3>טיפול משפחתי</h3>
             <p>טיפול משפחתי מסייע לשיפור הקשר המשפחתי והחיבורים בתוך המשפחה.</p>
-            <a href="<?php echo site_url('/family-therapy'); ?>">קרא עוד</a>
+            <a href="#">קרא עוד</a>
         </div>
         <div class="service">
+            <div class="image-section" style="background-image: url('http://moransabato.local/wp-content/uploads/2024/11/trauma.jpg');"></div>
+            <div class="text-section">
             <h3>טיפול בטראומה</h3>
             <p>עוזר לאנשים להתמודד עם טראומות ולשפר את איכות חייהם.</p>
-            <a href="<?php echo site_url('/trauma-therapy'); ?>">קרא עוד</a>
+            <a href="#">קרא עוד</a>
         </div>
         <div class="service">
+            <div class="image-section" style="background-image: url('http://moransabato.local/wp-content/uploads/2024/11/lisa-yee-therapy-core-services-intimate-connection-building-icon.png');"></div>
+            <div class="text-section">
             <h3>טיפול מיני</h3>
             <p>טיפול מיני תומך בזוגות ויחידים במטרה לשפר את חיי המין.</p>
-            <a href="<?php echo site_url('/sexual-therapy'); ?>">קרא עוד</a>
+            <a href="#">קרא עוד</a>
         </div>
     </section>
 
