@@ -253,3 +253,27 @@ body {
 .cta-button:hover {
     background: #D4A59A;
 }
+/* General Background Styling */
+body {
+    background-color: #FAF3E0; /* Light beige background */
+    color: #4A4A4A; /* Neutral dark gray text */
+}
+
+/* Background for Main Content */
+main {
+    background-color: #FFF; /* Keep the main content white for contrast */
+    border-radius: 10px; /* Rounded corners for a softer look */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    padding: 20px; /* Add padding inside */
+}
+
+/* Background for Header and Footer */
+header, footer {
+    background-color: #F2E5D5; /* Light pastel for header and footer */
+    color: #4A4A4A; /* Neutral text color */
+}
+
+/* Additional Styling for Sections */
+section {
+    margin-bottom: 30px; /* Add spacing between sections */
+}
