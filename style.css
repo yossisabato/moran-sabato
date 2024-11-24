@@ -30,6 +30,7 @@
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
     margin: 15px auto; /* Reduce spacing above and below */
     max-width: 800px; /* Restrict width for readability */
+    margin-bottom: 40px; /* Add spacing below the image section */
 }
 
 .intro + .intro-image {
@@ -363,13 +364,6 @@ section {
     max-width: 800px; /* Restrict width for readability */
 }
 
-/* Logo Styling */
-.site-logo img {
-    max-width: 150px; /* Set a fixed width for the logo */
-    height: auto; /* Maintain aspect ratio */
-    margin-bottom: 20px; /* Space below the logo */
-}
-
 /* Heading Styling */
 .intro h1 {
     font-size: 2rem; /* Adjust font size for visibility */
@@ -390,15 +384,4 @@ section {
 /* Background Enhancements */
 body {
     background: linear-gradient(135deg, #FAF3E0, #FFF8E1); /* Add a soft gradient */
-}
-
-/* Adjust Content Alignment */
-.intro-content {
-    text-align: center; /* Center-align text inside the intro */
-    padding: 20px; /* Add padding around the text */
-}
-
-/* Add Space Between Image and Content */
-.intro {
-    margin-bottom: 40px; /* Add spacing below the image section */
 }
