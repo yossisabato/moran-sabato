@@ -280,3 +280,49 @@ section {
     text-align: center; /* Center-align text */
     margin-bottom: 20px; /* Add space below the paragraph */
 }
+/* Service Boxes Backgrounds */
+.service:nth-child(1) {
+    background-image: url('http://moransabato.local/wp-content/uploads/2024/11/couple-bg-1-1.jpg'); /* Replace with the URL for Couples Therapy */
+    background-size: cover;
+    background-position: center;
+    color: #FFFFFF; /* Ensure text is visible on the background */
+}
+
+.service:nth-child(2) {
+    background-image: url('URL_FOR_FAMILY_THERAPY_IMAGE'); /* Replace with the URL for Family Therapy */
+    background-size: cover;
+    background-position: center;
+    color: #FFFFFF;
+}
+
+.service:nth-child(3) {
+    background-image: url('URL_FOR_TRAUMA_THERAPY_IMAGE'); /* Replace with the URL for Trauma Therapy */
+    background-size: cover;
+    background-position: center;
+    color: #FFFFFF;
+}
+
+.service:nth-child(4) {
+    background-image: url('URL_FOR_SEXUAL_THERAPY_IMAGE'); /* Replace with the URL for Sexual Therapy */
+    background-size: cover;
+    background-position: center;
+    color: #FFFFFF;
+}
+
+/* Add Padding and Background Color for Text Visibility */
+.service h3,
+.service p,
+.service a {
+    background-color: rgba(0, 0, 0, 0.6); /* Dark translucent background for text */
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Adjust Link Style */
+.service a {
+    color: #FFFFFF; /* Ensure the link text is visible */
+    text-decoration: none;
+}
+.service a:hover {
+    color: #FFD700; /* Add a hover effect */
+}
