@@ -220,8 +220,7 @@ h1, h2, h3 {
     background-size: cover;
     background-position: center;
     z-index: 1; /* Layer beneath the text */
-    filter: brightness(0.5); /* Darken the image for better text contrast */
-    border-radius: 10px 0 0 10px; /* Rounded corners on the left */
+    filter: brightness(0.6); /* Darken the image for better text contrast */
 }
 
 /* Styling for <p> in the Service Boxes */
@@ -387,6 +386,7 @@ section {
     .service::before {
         width: 100%; /* Full width background for small screens */
         height: 50%; /* Reduce height */
+        display: none; /* Disable the left image */
     }
 
     .service h3,
