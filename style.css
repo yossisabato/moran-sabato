@@ -317,28 +317,28 @@ section {
     background-image: url('http://moransabato.local/wp-content/uploads/2024/11/couple-bg-1-1.jpg'); /* Replace with the URL for Couples Therapy */
     background-size: cover;
     background-position: center;
-    color: #FFFFFF; /* Ensure text is visible on the background */
+    color: #efdaf2; /* Ensure text is visible on the background */
 }
 
 .service:nth-child(2) {
     background-image: url('URL_FOR_FAMILY_THERAPY_IMAGE'); /* Replace with the URL for Family Therapy */
     background-size: cover;
     background-position: center;
-    color: #FFFFFF;
+    color: #efdaf2;
 }
 
 .service:nth-child(3) {
     background-image: url('URL_FOR_TRAUMA_THERAPY_IMAGE'); /* Replace with the URL for Trauma Therapy */
     background-size: cover;
     background-position: center;
-    color: #FFFFFF;
+    color: #efdaf2;
 }
 
 .service:nth-child(4) {
     background-image: url('URL_FOR_SEXUAL_THERAPY_IMAGE'); /* Replace with the URL for Sexual Therapy */
     background-size: cover;
     background-position: center;
-    color: #FFFFFF;
+    color: #efdaf2;
 }
 
 /* Add Padding and Background Color for Text Visibility */
@@ -364,7 +364,7 @@ section {
     display: inline-block;
     padding: 10px 20px;
     background-color: #D4A59A; /* Accent color for the button */
-    color: #FFFFFF;
+    color: #efdaf2;
     text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.3s ease;
