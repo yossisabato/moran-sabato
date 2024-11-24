@@ -317,7 +317,7 @@ section {
 
 /* Background for Box Headings */
 .service h3 {
-    background-color: #FFF8E1; /* Light pastel for the heading background */
+    background-color: #e8f8ff; /* Light pastel for the heading background */
     padding: 10px;
     border-radius: 8px;
     display: inline-block; /* Keeps heading inside a limited box */
