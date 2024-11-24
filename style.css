@@ -531,20 +531,21 @@ section {
 
 /* Floating WhatsApp Button */
 .whatsapp-floating-button {
-    position: fixed; /* Make the button fixed while scrolling */
-    top: 50%; /* Position it vertically at the center of the screen */
-    left: 10px; /* Align it slightly inward from the left screen edge */
-    transform: translateY(-50%); /* Center it vertically */
-    z-index: 1000; /* Ensure it appears above other content */
+     position: fixed;
+    left: 20px; /* Adjust this value to move it to the right, e.g., 40px for more */
+    bottom: 50%; /* Keep it vertically centered, or adjust as needed */
+    transform: translateY(50%); /* Ensures the button is centered vertically */
+    z-index: 1000; /* Ensure it stays on top of other elements */
+    width: 60px; /* Adjust width if needed */
+    height: 60px; /* Adjust height if needed */
     background-color: #25D366; /* WhatsApp green */
     border-radius: 50%; /* Make it circular */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
-    width: 60px; /* Button size */
-    height: 60px; /* Button size */
-    display: flex; /* Center the icon inside */
-    align-items: center;
-    justify-content: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add hover effects */
+    display: flex; /* Center the icon */
+    justify-content: center; /* Center the icon horizontally */
+    align-items: center; /* Center the icon vertically */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out, background-color 0.3s ease;
 }
 
 /* WhatsApp Icon Styling */
@@ -555,8 +556,8 @@ section {
 
 /* Hover Effect */
 .whatsapp-floating-button:hover {
-    transform: translateY(-50%) scale(1.1); /* Slight zoom on hover */
-    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3); /* Enhance shadow on hover */
+    transform: translateY(50%) scale(1.1); /* Slightly enlarge on hover */
+    background-color: #20B957; /* Slightly darker green on hover */
 }
 @media (max-width: 768px) {
     .whatsapp-floating-button {
