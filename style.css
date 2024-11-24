@@ -32,13 +32,7 @@
     max-width: 800px; /* Restrict width for readability */
     margin-bottom: 40px; /* Add spacing below the image section */
 }
-/* Intro Section Styling 
-.intro {
-    padding: 40px; 
-    margin: 20px auto;
-    max-width: 800px; 
-}
-*/
+
 .intro + .intro-image {
     margin-top: 10px; /* Reduce space between the intro and the image */
 }
@@ -192,12 +186,34 @@ h1, h2, h3 {
 .service {
     background-color: #EFF7FC; /* White background for the box */
     border: 1px solid #D4A59A; /* Subtle border for the box */
-    border-radius: 10px; /* Rounded corners for the box */
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Add subtle shadow for depth */
     padding: 20px; /* Add padding inside the box */
     margin: 15px auto; /* Space between the boxes and center-align */
-    width: 80%; /* Adjust width for better layout */
     text-align: center; /* Center-align the text and content inside */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%; /* 80 Adjusted width for better layout */
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+/* Background Image Styling */
+.service::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    z-index: 1; /* Layer beneath the text */
+    filter: brightness(0.5); /* Darken the image for better text contrast */
+    border-radius: 10px; /* Match the container's shape */
 }
 
 /* Styling for <p> in the Service Boxes */
@@ -281,6 +297,21 @@ section {
     margin-bottom: 20px; /* Add space below the paragraph */
 }
 /* Service Boxes Backgrounds */
+
+/* Specific Backgrounds for Each Service */
+.service:nth-child(1)::before {
+    background-image: url('http://moransabato.local/wp-content/uploads/2024/11/couple-bg-1-1.jpg'); /* Replace with URL */
+}
+.service:nth-child(2)::before {
+    background-image: url('URL_FOR_FAMILY_THERAPY_IMAGE'); /* Replace with URL */
+}
+.service:nth-child(3)::before {
+    background-image: url('URL_FOR_TRAUMA_THERAPY_IMAGE'); /* Replace with URL */
+}
+.service:nth-child(4)::before {
+    background-image: url('URL_FOR_SEXUAL_THERAPY_IMAGE'); /* Replace with URL */
+}
+
 .service:nth-child(1) {
     background-image: url('http://moransabato.local/wp-content/uploads/2024/11/couple-bg-1-1.jpg'); /* Replace with the URL for Couples Therapy */
     background-size: cover;
@@ -310,19 +341,42 @@ section {
 }
 
 /* Add Padding and Background Color for Text Visibility */
+/* Text Styling */
 .service h3,
 .service p,
 .service a {
-    background-color: rgba(0, 0, 0, 0.6); /* Dark translucent background for text */
+    position: relative;
+    z-index: 2; /* Ensure text appears above the background */
+    color: #FFFFFF; /* White text for contrast */
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background for text */
     padding: 10px;
     border-radius: 5px;
+    text-align: center;
 }
 
-/* Adjust Link Style */
+.service p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
 .service a {
-    color: #FFFFFF; /* Ensure the link text is visible */
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #D4A59A; /* Accent color for the button */
+    color: #FFFFFF;
     text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
+
 .service a:hover {
-    color: #FFD700; /* Add a hover effect */
+    background-color: #A3B9A4; /* Slight hover effect */
 }
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .service {
+        width: 100%; /* Full width on smaller screens */
+    }
+}
+
