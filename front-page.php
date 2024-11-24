@@ -2,7 +2,7 @@
 <main>
     <section>
         <div class="site-logo">
-        <img src="<?php echo esc_url('http://moransabato.local/wp-content/uploads/2024/11/moran-logo.pdf'); ?>" alt="מרכז טיפולי מורן סבתו">
+        <img src="<?php echo esc_url('http://moransabato.local/wp-content/uploads/2024/11/moran-logo.png'); ?>" alt="מרכז טיפולי מורן סבתו">
     </div>
         <h1>מרכז טיפולי - מורן סבתו</h1>
         <p>מרכז מהתמחה בטיפול מיני, זוגי, משפחתי, טיפול בטראומה, וטיפול בפגיעות מיניות - פוגעים ונפגעים</p>
