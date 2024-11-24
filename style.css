@@ -528,3 +528,45 @@ section {
         text-align: center; /* Center-align text */
     }
 }
+
+/* Floating WhatsApp Button */
+.whatsapp-floating-button {
+    position: fixed; /* Make the button fixed while scrolling */
+    top: 50%; /* Position it vertically at the center of the screen */
+    left: 10px; /* Align it slightly inward from the left screen edge */
+    transform: translateY(-50%); /* Center it vertically */
+    z-index: 1000; /* Ensure it appears above other content */
+    background-color: #25D366; /* WhatsApp green */
+    border-radius: 50%; /* Make it circular */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    width: 60px; /* Button size */
+    height: 60px; /* Button size */
+    display: flex; /* Center the icon inside */
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add hover effects */
+}
+
+/* WhatsApp Icon Styling */
+.whatsapp-floating-button img {
+    width: 30px; /* Icon size */
+    height: 30px; /* Icon size */
+}
+
+/* Hover Effect */
+.whatsapp-floating-button:hover {
+    transform: translateY(-50%) scale(1.1); /* Slight zoom on hover */
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3); /* Enhance shadow on hover */
+}
+@media (max-width: 768px) {
+    .whatsapp-floating-button {
+        left: 5px; /* Move closer to the edge on smaller screens */
+        width: 50px; /* Smaller size for mobile */
+        height: 50px; /* Smaller size for mobile */
+    }
+
+    .whatsapp-floating-button img {
+        width: 25px; /* Adjust icon size */
+        height: 25px; /* Adjust icon size */
+    }
+}
