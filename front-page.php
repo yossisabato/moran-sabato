@@ -7,7 +7,7 @@
     
  <!--   <section class="services">
     <h2>הטיפולים שלנו</h2> <!-- Heading outside the service boxes -->
-  -->  
+    
     <div class="service">
         <h3>טיפול זוגי</h3>
         <p>טיפול זוגי מסייע לשיפור הקשר הזוגי והחיבור בין בני הזוג.</p>
