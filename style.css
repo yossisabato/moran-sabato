@@ -454,7 +454,7 @@ section {
     display: inline-block;
     padding: 12px 20px;
     background-color: #D4A59A; /* Accent color */
-    color: #FFFFFF;
+    color: #efffe8;
     text-decoration: none;
     border-radius: 5px;
     text-align: center;
@@ -472,7 +472,7 @@ section {
 .service .text-section {
     width: 50%; /* Half width */
     padding: 20px;
-    background-color: #FFFFFF; /* Soft white background */
+    background-color: #efffe8; /* Soft white background */
     display: flex; /* Enable Flexbox */
     flex-direction: column; /* Stack items */
     justify-content: center; /* Center content vertically */
@@ -506,7 +506,7 @@ section {
     display: inline-block;
     padding: 12px 20px;
     background-color: #D4A59A; /* Accent color */
-    color: #FFFFFF; /* White text for contrast */
+    color: #efffe8; /* White text for contrast */
     text-decoration: none; /* Remove underline */
     border-radius: 30px; /* Pill-shaped button */
     text-align: center;
