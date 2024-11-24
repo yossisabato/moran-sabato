@@ -94,3 +94,50 @@ footer {
     color: #4A4A4A;
     font-size: 0.9rem;
 }
+
+/* Restore General Colors */
+body {
+    background-color: #FAF3E0; /* Warm pastel background */
+    color: #4A4A4A; /* Neutral dark gray text */
+}
+
+a {
+    color: #A3B9A4; /* Soft green for links */
+    text-decoration: none; /* Remove underline for links */
+}
+
+a:hover {
+    color: #D4A59A; /* Light pastel accent on hover */
+}
+
+/* Restore Section Background */
+main {
+    background-color: #FFF; /* White background for main content */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Footer */
+footer {
+    background-color: #F2E5D5;
+    color: #4A4A4A;
+    text-align: center;
+    padding: 15px 0;
+}
+
+/* Restore H3 Styles */
+h3 {
+    font-size: 1.8rem; /* Larger size for emphasis */
+    font-weight: bold; /* Bold text */
+    color: #4A4A4A; /* Neutral dark gray */
+    text-align: center; /* Center-align the heading */
+    margin-bottom: 15px; /* Space below the heading */
+}
+
+/* Service Section H3 Styling */
+.service h3 {
+    font-size: 1.8rem; /* Match the rest of the site */
+    color: #4A4A4A; /* Neutral dark gray */
+    margin-bottom: 10px; /* Space below heading */
+    text-align: center; /* Center-align for consistency */
+}
