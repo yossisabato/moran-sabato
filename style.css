@@ -175,7 +175,7 @@ h1, h2, h3 {
     height: 300px; /* Adjust height as needed */
     padding: 20px; /* Spacing for text */
     overflow: hidden; /* Ensure no overflow issues */
-    flex-direction: row; /* Set the image on the left and text on the right */
+    flex-direction: row-reverse; /* Set the image on the left and text on the right */
     
     width: 90%; /* Keep width consistent */
     margin: 20px auto; /* Center align the section */
@@ -362,21 +362,6 @@ section {
     background-color: #A3B9A4; /* Slight hover effect */
 }
 
-.service {
-    display: flex; /* Side-by-side layout */
-    flex-direction: row-reverse; /* Flip the order: image on the left, text on the right */
-    align-items: center; /* Vertically center the content */
-    justify-content: space-between; /* Add space between sections */
-    padding: 0;
-    margin: 15px auto;
-    width: 90%; /* Adjust width */
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    height: 300px;
-    background-color: #F7F2EC; /* Neutral background */
-}
-
 .service .image-section {
     width: 50%; /* Half width */
     height: 100%; /* Full height */
@@ -558,7 +543,7 @@ section {
 /* Service Section */
 .service {
     display: flex; /* Use Flexbox for layout */
-    flex-direction: row; /* Set the image on the left and text on the right */
+    flex-direction: row-reverse; /* Set the image on the left and text on the right */
     align-items: center; /* Center items vertically */
     justify-content: space-between; /* Add space between items */
     width: 90%; /* Keep width consistent */
