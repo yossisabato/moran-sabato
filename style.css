@@ -1,351 +1,96 @@
-/*
-Theme Name: Moran Sabato
-Theme URI: https://yourwebsite.com - changed to Theme URI: moransabato.local
-Description: Custom theme for Moran Sabato project
-Author: Your Name
-Author URI: https://yourwebsite.com
-Version: 1.0
-*/
-/* General Styling */
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    padding: 20px;
-    background-color: #FAF3E0;
-    color: #4A4A4A;
-    direction: rtl;
-    text-align: right;
-}
-
-header, footer {
-    background-color: #F2E5D5;
-    padding: 10px 0;
-    color: #4A4A4A;
-    text-align: center;
-}
-
-/* Header Styles */
-header h1 a {
-    text-decoration: none;
-    color: #4A4A4A;
-}
-
-nav {
-    margin: 15px 0;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin-left: 15px;
-    margin-right: 0;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: #4A4A4A;
-}
-
-nav ul li a:hover {
-    color: #D4A59A; /* Accent color */
-}
-
-/* Footer Styles */
-footer {
-    margin-top: 20px;
-    padding: 15px 0;
-    font-size: 0.9em;
-}
-
-/* Main Content Styles */
-main {
-    background-color: #FFF;
-    border-radius: 8px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 1200px; /* Increase the maximum width of the main section */
-    margin: 0 auto; /* Center the main content horizontally */
-    padding: 20px; /* Add padding inside the section for spacing */
-}
-
-/* Services Section (Home Page) */
-.services {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    flex-wrap: wrap; /* This will allow columns to wrap on smaller screens */
-    padding: 20px;
-    margin-top: 20px;
-    flex-direction: column; /* Stack items vertically */
-    justify-content: center; /* Center items vertically */
-    align-items: center; /* Center items horizontally */
-    text-align: center; /* Center-align all text inside */
-}
-
-.service {
-    display: flex; /* Enables flexbox */
-    flex-direction: column; /* Stacks content vertically */
-    align-items: center; /* Centers content horizontally */
-    text-align: center; /* Centers text inside the box */
-    justify-content: center; /* Centers content vertically */
-    padding: 20px; /* Adds padding inside the box */
-    background: #FFF; /* Keeps the white background */
-    border: 1px solid #F2E5D5; /* Border for the box */
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    margin: 15px auto; /* Adds space and centers the boxes horizontally */
-    width: 80%; /* Adjust width for better layout on smaller screens */
-}
-
-.services h2 {
-    text-align: center;
-    font-size: 2.5rem; /* Slightly larger text for prominence */
-    font-weight: bold;
-    color: #4A4A4A; /* Consistent neutral dark color */
-    margin-bottom: 30px; /* Spacing between heading and services */
-    margin-top: 40px; /* Space above the heading */
-    border-bottom: 3px solid #D4A59A; /* Add a subtle underline */
-    display: inline-block; /* Keeps underline limited to the text width */
-    padding-bottom: 10px; /* Adds space between text and underline */
-    background-color: #F2E5D5; /* Adds a light pastel background for emphasis */
-    padding: 10px 20px; /* Adds padding around the text */
-    border-radius: 5px; /* Rounded corners for a softer look */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-}
-
-.service h3 {
-    text-align: center; /* Centers the heading */
-    font-size: 1.8rem; /* Slightly larger font size */
-    font-weight: bold; /* Makes the text bold */
-    margin-bottom: 10px; /* Adds space below the heading */
-    color: #4A4A4A; /* Neutral dark gray */
-}
-
-.service a {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 10px 15px;
-    background-color: #A3B9A4;
-    color: #FFF;
-    text-decoration: none;
-    border-radius: 4px;
-    transition: background-color 0.3s;
-}
-
-.service a:hover {
-    background-color: #D4A59A; /* Accent color */
-}
-
-/* Contact Form */
-form {
-    display: flex;
-    flex-direction: column;
-    max-width: 500px;
-    margin: 0 auto;
-}
-
-label {
-    margin-top: 10px;
-    font-weight: bold;
-    color: #4A4A4A;
-    text-align: right;
-}
-
-input, textarea {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #D4A59A;
-    border-radius: 4px;
-    background-color: #FAF3E0;
-    text-align: right;
-}
-
-button {
-    margin-top: 15px;
-    padding: 10px;
-    background-color: #A3B9A4;
-    color: #FFF;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    margin-left: auto;
-    margin-right: 0;
-}
-
-button:hover {
-    background-color: #D4A59A;
-}
-
-/* Additional Styling for Consistency */
-h1, h2, h3 {
-    font-family: 'Arial', sans-serif;
-    color: #4A4A4A;
-}
-
-h1 {
-    text-align: center; /* Center the heading */
-}
-/* General Styling for H2 Headings */
-h2 {
-    font-size: 2.2rem; /* Slightly larger text */
-    font-weight: bold; /* Make it stand out */
-    color: #4A4A4A; /* Neutral dark color for readability */
-    text-align: center; /* Center the heading */
-    margin-bottom: 25px; /* Space below the heading */
-    margin-top: 40px; /* Space above the heading */
-    border-bottom: 3px solid #D4A59A; /* Add a decorative underline */
-    display: inline-block; /* Makes the underline match text width */
-    padding-bottom: 8px; /* Space between text and underline */
-    line-height: 1.4; /* Adjust line spacing */
-    background-color: #F2E5D5; /* Light pastel background */
-    padding: 10px 20px; /* Add padding around the text */
-    border-radius: 5px; /* Slightly round the edges */
-    display: inline-block; /* Keeps it centered and compact */
-}
-/* Optional: Styling for Specific Sections (if needed) */
-.services h2, .cta h2 {
-    margin-top: 40px; /* Extra space for better separation in these sections */
-}
-
-
-h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-}
-
-p {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    margin-bottom: 15px;
-    text-align: center; /* Center the heading */
-}
-
-.service-icon {
-    width: 50px;
-    height: 50px;
-    margin-bottom: 15px;
-}
-
-@media (max-width: 768px) {
-    .intro {
-        flex-direction: column; /* Stack content vertically */
-        text-align: center; /* Center-align all text and image */
-    }
-
-    .intro-content, .intro-image {
-        flex: unset; /* Reset flex properties */
-    }
-
-    .intro-content {
-        margin-bottom: 20px; /* Add space between text and image */
-    }
-    .intro {
-        display: flex; /* Use Flexbox for layout */
-        align-items: center; /* Vertically align the content */
-        justify-content: space-between; /* Add space between the text and image */
-        height: 90vh; /* Occupy 90% of the viewport height */
-        padding: 20px; /* Add padding around the content */
-        box-sizing: border-box; /* Include padding in the height calculation */
-    }
-    
-    .intro-image {
-        flex: 1; /* Allow the image container to take up space */
-        text-align: center; /* Center-align the image */
-    }
-    
-    .intro-image img {
-        height: 75vh; /* Make the image occupy 75% of the viewport height */
-        width: auto; /* Maintain the original aspect ratio */
-        max-width: 50%; /* Prevent the image from exceeding half the screen width */
-        border-radius: 10px; /* Optional: Add rounded corners */
-        object-fit: cover; /* Ensure the image scales nicely */
-        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
-    }
-
-.cta {
-    text-align: center;
-    padding: 30px;
-    background: #F2E5D5;
-    border-radius: 10px;
-    margin-top: 40px;
-}
-
-.cta h2 {
-    font-size: 1.8rem;
-    margin-bottom: 40px;
-    color: #4A4A4A;
-}
-
-.cta p {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-}
-
-.cta-button {
-    display: inline-block;
-    padding: 10px 20px;
-    background: #A3B9A4;
-    color: #FFF;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    transition: background-color 0.3s ease;
-}
-
-.cta-button:hover {
-    background: #D4A59A;
-}
-
+/* Logo Styling */
 .site-logo {
     text-align: center; /* Center the logo */
     margin-bottom: 20px; /* Add space below the logo */
 }
 
 .site-logo img {
-    max-width: 150px; /* Adjust the size of the logo */
+    max-width: 180px; /* Slightly larger size */
     height: auto; /* Maintain aspect ratio */
+    margin: 0 auto; /* Center the logo */
     border-radius: 10px; /* Optional: Add rounded corners */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    transition: transform 0.3s ease; /* Add a hover effect */
 }
 
-.site-title {
-    display: none;
-}
-.page-title {
-    display: none;
+.site-logo img:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
 }
 
-/* Intro Section Styling */
+/* Intro Section */
 .intro {
-    display: flex; /* Use Flexbox for side-by-side layout */
+    display: flex; /* Use Flexbox for layout */
     align-items: center; /* Vertically align content */
     justify-content: space-between; /* Add space between content and image */
-    gap: 20px; /* Space between the text and image */
-    margin: 40px 0; /* Add spacing above and below the section */
+    height: 80vh; /* Adjust height for better visibility */
+    padding: 20px;
+    box-sizing: border-box; /* Include padding in the height calculation */
 }
 
 .intro-content {
-    flex: 1; /* Content takes up 60% of the width */
-    text-align: right; /* Align text to the right for RTL */
+    flex: 1; /* Content takes up equal space */
+    text-align: right; /* Align text for RTL layout */
+    padding: 20px;
 }
 
 .intro-content h2 {
-    font-size: 2rem;
-    margin-bottom: 10px;
+    font-size: 2.2rem;
+    margin-bottom: 20px;
     color: #4A4A4A;
 }
 
 .intro-content p {
     font-size: 1.2rem;
-    line-height: 1.6;
+    line-height: 1.8;
     color: #4A4A4A;
 }
 
-html {
-    scroll-behavior: smooth;
+.intro-image {
+    flex: 1; /* Allow the image to take equal space */
+    text-align: center; /* Center-align the image */
+}
+
+.intro-image img {
+    max-height: 70vh; /* Prevent the image from being too tall */
+    max-width: 100%; /* Keep the image responsive */
+    border-radius: 10px; /* Rounded corners */
+    object-fit: cover; /* Maintain aspect ratio */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Add a shadow for depth */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .intro {
+        flex-direction: column; /* Stack text and image vertically */
+        height: auto; /* Allow height to adjust naturally */
+    }
+
+    .intro-content {
+        text-align: center; /* Center text on smaller screens */
+        padding: 10px;
+    }
+
+    .intro-image img {
+        max-height: 50vh; /* Scale down image for smaller screens */
+        width: auto; /* Maintain aspect ratio */
+    }
+}
+
+/* Main Content */
+main {
+    max-width: 1200px; /* Keep the content centered */
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #FFF;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+footer {
+    background-color: #F2E5D5;
+    padding: 15px 0;
+    text-align: center;
+    color: #4A4A4A;
+    font-size: 0.9rem;
 }
