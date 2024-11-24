@@ -161,17 +161,21 @@ h1, h2, h3 {
 
 /* General Styling for H2 Headings */
 h2 {
-    font-size: 2rem; /* Larger text size */
-    font-weight: bold; /* Make it bold */
-    color: #4A4A4A; /* Consistent dark gray color */
-    text-align: center; /* Center-align the heading */
-    margin-bottom: 20px; /* Add space below the heading */
-    margin-top: 30px; /* Add space above the heading */
-    border-bottom: 2px solid #D4A59A; /* Add a decorative underline */
-    display: inline-block; /* Inline-block makes the border appear the correct size */
-    padding-bottom: 5px; /* Space between text and border */
+    font-size: 2.2rem; /* Slightly larger text */
+    font-weight: bold; /* Make it stand out */
+    color: #4A4A4A; /* Neutral dark color for readability */
+    text-align: center; /* Center the heading */
+    margin-bottom: 25px; /* Space below the heading */
+    margin-top: 40px; /* Space above the heading */
+    border-bottom: 3px solid #D4A59A; /* Add a decorative underline */
+    display: inline-block; /* Makes the underline match text width */
+    padding-bottom: 8px; /* Space between text and underline */
+    line-height: 1.4; /* Adjust line spacing */
+    background-color: #F2E5D5; /* Light pastel background */
+    padding: 10px 20px; /* Add padding around the text */
+    border-radius: 5px; /* Slightly round the edges */
+    display: inline-block; /* Keeps it centered and compact */
 }
-
 /* Optional: Styling for Specific Sections (if needed) */
 .services h2, .cta h2 {
     margin-top: 40px; /* Extra space for better separation in these sections */
