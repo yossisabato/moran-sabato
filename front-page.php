@@ -39,6 +39,7 @@
             <p>טיפול משפחתי מסייע לשיפור הקשר המשפחתי והחיבורים בתוך המשפחה.</p>
             <a href="#">קרא עוד</a>
         </div>
+        </div>
         <div class="service">
             <div class="image-section" style="background-image: url('http://moransabato.local/wp-content/uploads/2024/11/trauma.jpg');"></div>
             <div class="text-section">
@@ -46,12 +47,14 @@
             <p>עוזר לאנשים להתמודד עם טראומות ולשפר את איכות חייהם.</p>
             <a href="#">קרא עוד</a>
         </div>
+        </div>
         <div class="service">
             <div class="image-section" style="background-image: url('http://moransabato.local/wp-content/uploads/2024/11/lisa-yee-therapy-core-services-intimate-connection-building-icon.png');"></div>
             <div class="text-section">
             <h3>טיפול מיני</h3>
             <p>טיפול מיני תומך בזוגות ויחידים במטרה לשפר את חיי המין.</p>
             <a href="#">קרא עוד</a>
+        </div>
         </div>
     </section>
 
