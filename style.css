@@ -235,6 +235,21 @@ p {
         width: 90%; /* Full width on smaller screens */
     }
 }
+@media (max-width: 768px) {
+    .intro {
+        flex-direction: column; /* Stack content vertically */
+        text-align: center; /* Center-align all text and image */
+    }
+
+    .intro-content, .intro-image {
+        flex: unset; /* Reset flex properties */
+    }
+
+    .intro-content {
+        margin-bottom: 20px; /* Add space between text and image */
+    }
+}
+
 .cta {
     text-align: center;
     padding: 30px;
