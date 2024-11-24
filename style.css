@@ -280,3 +280,27 @@ section {
 body {
     background: linear-gradient(135deg, #FAF3E0, #FCEFEF);
 }
+/* Main Content Background */
+main {
+    background-color: #FDF6E3; /* Soft pastel beige */
+    border-radius: 10px; /* Keep the rounded corners */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    padding: 20px; /* Maintain padding */
+}
+
+/* Optional Gradient for Content Area */
+main {
+    background: linear-gradient(135deg, #FDF6E3, #FAEDE3); /* Soft gradient */
+}
+
+/* Header and Footer Background */
+header, footer {
+    background-color: #F2E5D5; /* Subtle pastel color to match */
+}
+
+/* Contact and Services Sections (if needed) */
+section {
+    background-color: #FAF3E0; /* Light pastel for consistency */
+    border-radius: 10px;
+    padding: 20px;
+}
