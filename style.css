@@ -244,15 +244,27 @@ p {
     .intro-content {
         margin-bottom: 20px; /* Add space between text and image */
     }
+    .intro {
+        display: flex; /* Use Flexbox for layout */
+        align-items: center; /* Vertically align the content */
+        justify-content: space-between; /* Add space between the text and image */
+        height: 90vh; /* Occupy 90% of the viewport height */
+        padding: 20px; /* Add padding around the content */
+        box-sizing: border-box; /* Include padding in the height calculation */
+    }
+    
     .intro-image {
-    flex: 1; /* Image takes up 40% of the width */
-    text-align: center; /* Center-align the image */
+        flex: 1; /* Allow the image container to take up space */
+        text-align: center; /* Center-align the image */
     }
     
     .intro-image img {
-            height: auto;
-            max-width: 100%;
-        }
+        height: 75vh; /* Make the image occupy 75% of the viewport height */
+        width: auto; /* Maintain the original aspect ratio */
+        max-width: 50%; /* Prevent the image from exceeding half the screen width */
+        border-radius: 10px; /* Optional: Add rounded corners */
+        object-fit: cover; /* Ensure the image scales nicely */
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
     }
 
 .cta {
