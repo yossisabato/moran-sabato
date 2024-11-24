@@ -186,4 +186,38 @@ p {
         width: 100%; /* Full width on mobile */
     }
 }
+.cta {
+    text-align: center;
+    padding: 30px;
+    background: #F2E5D5;
+    border-radius: 10px;
+    margin-top: 40px;
+}
+
+.cta h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #4A4A4A;
+}
+
+.cta p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #A3B9A4;
+    color: #FFF;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background: #D4A59A;
+}
+
 
