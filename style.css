@@ -86,14 +86,18 @@ main {
 }
 
 .service {
-    width: 40%; /* Adjust width for better balance */
-    padding: 25px; /* Add more padding inside each column */
-    background: #FFF;
-    border: 1px solid #F2E5D5;
-    border-radius: 10px; /* Slightly rounder corners */
-    text-align: center;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Softer shadow */
-    margin-bottom: 30px; /* More space between rows */
+    display: flex; /* Enables flexbox */
+    flex-direction: column; /* Stacks content vertically */
+    align-items: center; /* Centers content horizontally */
+    text-align: center; /* Centers text inside the box */
+    justify-content: center; /* Centers content vertically */
+    padding: 20px; /* Adds padding inside the box */
+    background: #FFF; /* Keeps the white background */
+    border: 1px solid #F2E5D5; /* Border for the box */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin: 15px auto; /* Adds space and centers the boxes horizontally */
+    width: 80%; /* Adjust width for better layout on smaller screens */
 }
 
 .services h2 {
@@ -113,11 +117,11 @@ main {
 }
 
 .service h3 {
-    text-align: center; /* Center the text */
-    font-size: 1.8rem; /* Slightly larger text for emphasis */
-    font-weight: bold; /* Make the text bold */
-    margin-bottom: 15px; /* Space below the heading */
-    color: #4A4A4A; /* Neutral dark gray for readability */
+    text-align: center; /* Centers the heading */
+    font-size: 1.8rem; /* Slightly larger font size */
+    font-weight: bold; /* Makes the text bold */
+    margin-bottom: 10px; /* Adds space below the heading */
+    color: #4A4A4A; /* Neutral dark gray */
 }
 
 .service a {
