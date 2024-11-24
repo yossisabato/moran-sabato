@@ -18,30 +18,30 @@
             </p>
         </div>
         <div class="intro-image">
-            <img src="http://moransabato.local/wp-content/uploads/2024/11/Moran-scaled.jpg" alt="מרכז טיפולי מורן סבטו">
+            <img src="http://moransabato.local/wp-content/uploads/2024/11/Moran-scaled.jpg" alt="מרכז טיפולי מורן סבתו">
         </div>
     </section>
 
     <section class="services">
         <div class="service">
             <h3>טיפול זוגי</h3>
-            <p>טיפול זוגי מסייע לשיפור הקשר הזוגי והחיבור בין בני הזוג.</p>
-            <a href="<?php echo site_url('/couples-therapy'); ?>">Learn More</a>
+            <p>טיפול זוגי מסייע לשיפור הקשר הזוגי , הדרכות הורים.</p>
+            <a href="<?php echo site_url('/couples-therapy'); ?>">קרא עוד</a>
         </div>
         <div class="service">
             <h3>טיפול משפחתי</h3>
             <p>טיפול משפחתי מסייע לשיפור הקשר המשפחתי והחיבורים בתוך המשפחה.</p>
-            <a href="<?php echo site_url('/family-therapy'); ?>">Learn More</a>
+            <a href="<?php echo site_url('/family-therapy'); ?>">קרא עוד</a>
         </div>
         <div class="service">
             <h3>טיפול בטראומה</h3>
             <p>עוזר לאנשים להתמודד עם טראומות ולשפר את איכות חייהם.</p>
-            <a href="<?php echo site_url('/trauma-therapy'); ?>">Learn More</a>
+            <a href="<?php echo site_url('/trauma-therapy'); ?>">קרא עוד</a>
         </div>
         <div class="service">
             <h3>טיפול מיני</h3>
             <p>טיפול מיני תומך בזוגות ויחידים במטרה לשפר את חיי המין.</p>
-            <a href="<?php echo site_url('/sexual-therapy'); ?>">Learn More</a>
+            <a href="<?php echo site_url('/sexual-therapy'); ?>">קרא עוד</a>
         </div>
     </section>
 
