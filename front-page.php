@@ -13,6 +13,11 @@
         <a href="<?php echo site_url('/couples-therapy'); ?>">Learn More</a>
     </div>
     <div class="service">
+        <h3>טיפול משפחתי</h3>
+        <p>טיפול משפחתי מסייע לשיפור הקשר המשפחתי והחיבורים בתוך המשפחה  </p>
+        <a href="<?php echo site_url('/couples-therapy'); ?>">Learn More</a>
+    </div>
+    <div class="service">
         <h3>טיפול בטראומה</h3>
         <p>עוזר לאנשים להתמודד עם טראומות ולשפר את איכות חייהם.</p>
         <a href="<?php echo site_url('/trauma-therapy'); ?>">Learn More</a>
