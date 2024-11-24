@@ -9,7 +9,7 @@
 <body <?php body_class(); ?>>
 <header>
     <div class="site-logo">
-    <img src="<?php echo esc_url('YOUR_IMAGE_URL'); ?>" alt="<?php bloginfo('name'); ?>">
+    <img src="<?php echo esc_url('http://moransabato.local/wp-content/uploads/2024/11/moran-logo.png'); ?>" alt="<?php bloginfo('name'); ?>">
     </div>
     <nav>
         <?php
