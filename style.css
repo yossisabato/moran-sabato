@@ -366,3 +366,31 @@ section {
 body {
     background: linear-gradient(135deg, #FAF3E0, #FFF8E1); /* Add a soft gradient */
 }
+/* Intro Image Container */
+.intro-image {
+    display: flex; /* Use Flexbox for alignment */
+    justify-content: center; /* Center the image horizontally */
+    margin: 20px auto; /* Add space above and below, center horizontally */
+    max-width: 800px; /* Restrict the maximum width */
+    border-radius: 10px; /* Add rounded corners */
+    overflow: hidden; /* Ensure rounded corners apply to the image */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+}
+
+/* Intro Image */
+.intro-image img {
+    width: 100%; /* Make the image responsive */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensure the image scales nicely */
+}
+
+/* Adjust Content Alignment */
+.intro-content {
+    text-align: center; /* Center-align text inside the intro */
+    padding: 20px; /* Add padding around the text */
+}
+
+/* Add Space Between Image and Content */
+.intro {
+    margin-bottom: 40px; /* Add spacing below the image section */
+}
