@@ -141,3 +141,23 @@ h3 {
     margin-bottom: 10px; /* Space below heading */
     text-align: center; /* Center-align for consistency */
 }
+
+/* Paragraph Alignment */
+p {
+    text-align: right; /* Align all paragraphs to the right */
+    font-size: 1.1rem; /* Ensure a readable font size */
+    line-height: 1.6; /* Improve readability */
+    color: #4A4A4A; /* Neutral dark gray text color */
+    margin-bottom: 15px; /* Add spacing below each paragraph */
+}
+
+/* Center Alignment for Headlines */
+h1, h2, h3 {
+    text-align: center; /* Keep headlines centered */
+}
+
+/* Additional Styling for RTL Languages */
+body {
+    direction: rtl; /* Set the text direction to right-to-left */
+}
+
