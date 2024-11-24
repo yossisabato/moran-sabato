@@ -235,7 +235,6 @@ p {
     .intro {
         flex-direction: column; /* Stack content vertically */
         text-align: center; /* Center-align all text and image */
-        height: auto; /* Allow the section to adjust its height */
     }
 
     .intro-content, .intro-image {
