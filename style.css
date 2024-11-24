@@ -187,6 +187,9 @@ h1, h2, h3 {
     color: #4A4A4A;
 }
 
+h1 {
+    text-align: center; /* Center the heading */
+}
 /* General Styling for H2 Headings */
 h2 {
     font-size: 2.2rem; /* Slightly larger text */
