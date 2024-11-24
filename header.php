@@ -8,7 +8,9 @@
 </head>
 <body <?php body_class(); ?>>
 <header>
-    <h1><a href="<?php echo esc_url(home_url('/')); ?>"><?php bloginfo('name'); ?></a></h1>
+    <div class="site-logo">
+    <img src="<?php echo esc_url('YOUR_IMAGE_URL'); ?>" alt="<?php bloginfo('name'); ?>">
+    </div>
     <nav>
         <?php
         wp_nav_menu( array(
