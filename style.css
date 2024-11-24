@@ -77,7 +77,7 @@ main {
     gap: 20px;
     justify-content: center;
     flex-wrap: wrap; /* This will allow columns to wrap on smaller screens */
-    text-align: right;
+    text-align: center;
     padding: 20px;
     margin-top: 20px;
 }
