@@ -303,21 +303,21 @@ section {
 }
 
 .service:nth-child(2) {
-    background-image: url('http://moransabato.local/wp-content/uploads/2024/11/png-clipart-genealogy-family-constellations-family-therapy-psychogenealogie-family-people-cartoon-thumbnail.png'); /* Replace with the URL for Family Therapy */
+    background-image: url(''); /* Replace with the URL for Family Therapy */
     background-size: cover;
     background-position: center;
     color: #ffffff;
 }
 
 .service:nth-child(3) {
-    background-image: url('http://moransabato.local/wp-content/uploads/2024/11/trauma.jpg'); /* Replace with the URL for Trauma Therapy */
+    background-image: url(''); /* Replace with the URL for Trauma Therapy */
     background-size: cover;
     background-position: center;
     color: #ffffff;
 }
 
 .service:nth-child(4) {
-    background-image: url('http://moransabato.local/wp-content/uploads/2024/11/lisa-yee-therapy-core-services-intimate-connection-building-icon.png'); /* Replace with the URL for Sexual Therapy */
+    background-image: url(''); /* Replace with the URL for Sexual Therapy */
     background-size: cover;
     background-position: center;
     color: #ffffff;
