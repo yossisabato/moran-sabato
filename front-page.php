@@ -4,9 +4,10 @@
         <h1>מרכז טיפולי - מורן סבתו</h1>
         <p>מרכז מהתמחה בטיפול מיני, זוגי, משפחתי, טיפול בטראומה, וטיפול בפגיעות מיניות - פוגעים ונפגעים</p>
     </section>
-
-    <section class="services">
-    <h2>הטיפולים שלנו</h2> <!-- Heading outside the service boxes -->
+    
+ //   <section class="services">
+ //   <h2>הטיפולים שלנו</h2> <!-- Heading outside the service boxes -->
+    
     <div class="service">
         <h3>טיפול זוגי</h3>
         <p>טיפול זוגי מסייע לשיפור הקשר הזוגי והחיבור בין בני הזוג.</p>
