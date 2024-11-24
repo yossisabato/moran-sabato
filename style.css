@@ -286,13 +286,13 @@ section {
     background-image: url('http://moransabato.local/wp-content/uploads/2024/11/couple-bg-1-1.jpg'); /* Replace with URL */
 }
 .service:nth-child(2)::before {
-    background-image: url('http://moransabato.local/wp-content/uploads/2024/11/png-clipart-genealogy-family-constellations-family-therapy-psychogenealogie-family-people-cartoon-thumbnail.png'); /* Replace with URL */
+    background-image: url(''); /* Replace with URL */
 }
 .service:nth-child(3)::before {
-    background-image: url('http://moransabato.local/wp-content/uploads/2024/11/trauma.jpg'); /* Replace with URL */
+    background-image: url(''); /* Replace with URL */
 }
 .service:nth-child(4)::before {
-    background-image: url('http://moransabato.local/wp-content/uploads/2024/11/lisa-yee-therapy-core-services-intimate-connection-building-icon.png'); /* Replace with URL */
+    background-image: url(''); /* Replace with URL */
 }
 
 .service:nth-child(1) {
