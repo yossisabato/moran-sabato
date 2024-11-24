@@ -572,41 +572,79 @@ section {
     }
 }
 
-/* Shared Service Style */
+/* Service Section */
 .service {
-    display: flex; /* Enable Flexbox for alignment */
-    flex-direction: row; /* Default direction: image on the left, text on the right */
-    align-items: center; /* Vertically center items */
+    display: flex; /* Use Flexbox for layout */
+    flex-direction: row; /* Set the image on the left and text on the right */
+    align-items: center; /* Center items vertically */
     justify-content: space-between; /* Add space between items */
-    width: 90%; /* Adjust the overall width */
+    width: 90%; /* Keep width consistent */
     height: 300px; /* Set consistent height */
-    margin: 20px auto; /* Center align with margin */
-    border-radius: 10px; /* Rounded corners */
-    overflow: hidden; /* Ensure no content spills out */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    margin: 20px auto; /* Center align the section */
+    border-radius: 10px; /* Add rounded corners */
+    overflow: hidden; /* Prevent overflow */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
     background-color: #f8fff4; /* Light pastel background */
 }
 
 /* Left Section for Image */
 .service .image-section {
-    order: 1; /* Make the image appear first */
-    width: 50%; /* Set width for the image */
+    order: 1; /* Ensure the image appears first */
+    width: 50%; /* Image takes half the space */
     height: 100%; /* Full height */
-    background-size: cover; /* Ensure the image covers the section */
-    background-position: center; /* Center-align the image */
-    border-radius: 10px 0 0 10px; /* Rounded corners for the left side */
+    background-size: cover; /* Cover the area with the image */
+    background-position: center; /* Center the image */
+    border-radius: 10px 0 0 10px; /* Rounded corners on the left */
 }
 
 /* Right Section for Text */
 .service .text-section {
-    order: 2; /* Make the text appear second */
-    width: 50%; /* Set width for the text */
+    order: 2; /* Ensure the text appears second */
+    width: 50%; /* Text takes half the space */
     padding: 20px; /* Add padding for spacing */
-    background-color: #efffe8; /* Light background for the text section */
-    display: flex;
+    background-color: #efffe8; /* Light pastel background */
+    display: flex; /* Use Flexbox for text layout */
     flex-direction: column; /* Stack text items vertically */
-    justify-content: center; /* Center-align vertically */
+    justify-content: center; /* Center items vertically */
     text-align: right; /* Align text to the right */
-    border-radius: 0 10px 10px 0; /* Rounded corners for the right side */
-    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle inner shadow */
+    border-radius: 0 10px 10px 0; /* Rounded corners on the right */
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle inner shadow for elegance */
+}
+
+/* Heading in Text Section */
+.service .text-section h3 {
+    margin: 0 0 10px; /* Add spacing below the heading */
+    font-size: 1.8rem; /* Adjust font size */
+    font-weight: bold; /* Emphasize the heading */
+    color: #4A4A4A; /* Neutral dark gray */
+    border-bottom: 2px solid #D4A59A; /* Underline for separation */
+    padding-bottom: 5px; /* Add spacing under the heading */
+}
+
+/* Paragraph in Text Section */
+.service .text-section p {
+    margin: 0 0 20px; /* Add spacing below the paragraph */
+    font-size: 1.2rem; /* Adjust font size */
+    line-height: 1.6; /* Improve readability */
+    color: #6C6C6C; /* Softer text color */
+}
+
+/* Button in Text Section */
+.service .text-section a {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: #D4A59A; /* Accent color for the button */
+    color: #ffffff; /* White text for contrast */
+    text-decoration: none; /* Remove underline */
+    border-radius: 30px; /* Pill-shaped button */
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.1rem;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Add button shadow */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Add hover effects */
+}
+
+.service .text-section a:hover {
+    background-color: #A3B9A4; /* Softer green hover color */
+    transform: scale(1.05); /* Slight zoom on hover */
 }
