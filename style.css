@@ -277,3 +277,6 @@ header, footer {
 section {
     margin-bottom: 30px; /* Add spacing between sections */
 }
+body {
+    background: linear-gradient(135deg, #FAF3E0, #FCEFEF);
+}
