@@ -229,7 +229,7 @@ p {
 
 @media (max-width: 768px) {
     .service {
-        width: 100%; /* Full width on mobile */
+        width: 90%; /* Full width on smaller screens */
     }
 }
 .cta {
