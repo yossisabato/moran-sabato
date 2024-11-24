@@ -155,12 +155,24 @@ button:hover {
 
 /* Additional Styling for Consistency */
 h1, h2, h3 {
+    font-family: 'Arial', sans-serif;
     color: #4A4A4A;
-    font-family: Arial, sans-serif;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
 }
 
 p {
-    color: #4A4A4A;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
 }
 
 .service-icon {
