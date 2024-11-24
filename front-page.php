@@ -23,12 +23,15 @@
         </div>
     </section>
 
-    <section class="services">
-        <div class="service">
+    <section class="services">    
+        <div class="image-section" style="background-image: url('YOUR_IMAGE_URL');"></div>
+        <div class="text-section">
             <h3>טיפול זוגי</h3>
-            <p>טיפול זוגי מסייע לשיפור הקשר הזוגי , הדרכות הורים.</p>
-            <a href="<?php echo site_url('/couples-therapy'); ?>">קרא עוד</a>
-        </div>
+            <p>טיפול זוגי מסייע לשיפור הקשר הזוגי והחיבור בין בני הזוג.</p>
+            <a href="#">קרא עוד</a>
+            <!--   <a href="<?php echo site_url('/couples-therapy'); ?>">קרא עוד</a> -->
+         </div>
+    </div>
         <div class="service">
             <h3>טיפול משפחתי</h3>
             <p>טיפול משפחתי מסייע לשיפור הקשר המשפחתי והחיבורים בתוך המשפחה.</p>
