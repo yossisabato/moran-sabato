@@ -159,10 +159,24 @@ h1, h2, h3 {
     color: #4A4A4A;
 }
 
+/* General Styling for H2 Headings */
 h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
+    font-size: 2rem; /* Larger text size */
+    font-weight: bold; /* Make it bold */
+    color: #4A4A4A; /* Consistent dark gray color */
+    text-align: center; /* Center-align the heading */
+    margin-bottom: 20px; /* Add space below the heading */
+    margin-top: 30px; /* Add space above the heading */
+    border-bottom: 2px solid #D4A59A; /* Add a decorative underline */
+    display: inline-block; /* Inline-block makes the border appear the correct size */
+    padding-bottom: 5px; /* Space between text and border */
 }
+
+/* Optional: Styling for Specific Sections (if needed) */
+.services h2, .cta h2 {
+    margin-top: 40px; /* Extra space for better separation in these sections */
+}
+
 
 h3 {
     font-size: 1.5rem;
@@ -196,7 +210,7 @@ p {
 
 .cta h2 {
     font-size: 1.8rem;
-    margin-bottom: 15px;
+    margin-bottom: 40px;
     color: #4A4A4A;
 }
 
