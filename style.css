@@ -222,6 +222,7 @@ p {
     font-size: 1.1rem;
     line-height: 1.6;
     margin-bottom: 15px;
+    text-align: center; /* Center the heading */
 }
 
 .service-icon {
