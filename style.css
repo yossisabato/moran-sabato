@@ -81,14 +81,14 @@ main {
 }
 
 .service {
-    width: 45%; /* Adjust this to control the width of each column */
-    padding: 20px;
+    width: 40%; /* Adjust width for better balance */
+    padding: 25px; /* Add more padding inside each column */
     background: #FFF;
     border: 1px solid #F2E5D5;
-    border-radius: 8px;
+    border-radius: 10px; /* Slightly rounder corners */
     text-align: center;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Softer shadow */
+    margin-bottom: 30px; /* More space between rows */
 }
 
 .service h3 {
@@ -162,9 +162,10 @@ h1, h2, h3 {
 p {
     color: #4A4A4A;
 }
+
 @media (max-width: 768px) {
     .service {
-        width: 100%;
+        width: 100%; /* Full width on mobile */
     }
 }
 
