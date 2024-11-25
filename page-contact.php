@@ -47,6 +47,7 @@ if (!empty($error_message)) {
 <h1> 0528-751769 מורן סבתו</h1>
 <h3><a href="mailto:morano20@gmail.com">morano20@gmail.com</a></h3>
 <h3>מודיעין | ירושלים</h3>
+
 <div class="container">
     <!-- Page Header -->
     <div class="contact-header">
@@ -99,6 +100,13 @@ if (!empty($error_message)) {
 <?php endif; ?>
 
 </div>
+        
+<div id="image-popup" class="popup-overlay" style="display:none;">
+    <div class="popup-content">
+        <span class="close-btn" onclick="closePopup()">×</span>
+        <img id="popup-img" src="" alt="Popup Image" />
+    </div>
+</div>
 
 <!-- Add JavaScript before the footer -->
 <script>
@@ -115,12 +123,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 });
 </script>
-<div id="image-popup" class="popup-overlay" style="display:none;">
-    <div class="popup-content">
-        <span class="close-btn" onclick="closePopup()">×</span>
-        <img id="popup-img" src="" alt="Popup Image" />
-    </div>
-</div>
+
 <script>
     // Open Popup
     function openPopup(imageSrc) {
