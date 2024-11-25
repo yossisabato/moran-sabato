@@ -8,8 +8,8 @@ get_header();
 <div class="container">
     <!-- Page Header -->
     <div class="page-header">
-        <img src="<?php echo esc_url('http://moransabato.local/wp-content/uploads/2024/11/moran-logo.png'); ?>" alt="מרכז טיפולי">
-        <img src="<?php echo esc_url('http://moransabato.local/wp-content/uploads/2024/11/Moran-scaled.jpg'); ?>" alt="מורן סבתו">
+        <img src="http://moransabato.local/wp-content/uploads/2024/11/moran-logo.png" alt="Logo" class="logo">
+        <img src="http://moransabato.local/wp-content/uploads/2024/11/Moran-scaled.jpg" alt="Moran Sabato" class="image">
     </div>
 
     <!-- Static Information -->
