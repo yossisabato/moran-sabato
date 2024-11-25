@@ -7,8 +7,8 @@ get_header();
 <div class="container">
     <!-- Page Header -->
     <div class="page-header">
-        <img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="Logo">
-        <img src="<?php echo get_template_directory_uri(); ?>/images/moran-picture.jpg" alt="Moran Sabato">
+        <img src="<?php echo get_template_directory_uri(); ?>http://moransabato.local/wp-content/uploads/2024/11/moran-logo.png" alt="Logo">
+        <img src="<?php echo get_template_directory_uri(); ?>http://moransabato.local/wp-content/uploads/2024/11/Moran-scaled.jpg" alt="Moran Sabato">
     </div>
 
     <!-- Static Information -->
