@@ -100,13 +100,6 @@ if (!empty($error_message)) {
 <?php endif; ?>
 
 </div>
-        
-<div id="image-popup" class="popup-overlay" style="display:none;">
-    <div class="popup-content">
-        <span class="close-btn" onclick="closePopup()">×</span>
-        <img id="popup-img" src="" alt="Popup Image" />
-    </div>
-</div>
 
 <!-- Add JavaScript before the footer -->
 <script>
@@ -122,34 +115,6 @@ document.addEventListener("DOMContentLoaded", function() {
         alert(errorMessage.textContent); // Pop-up for error
     }
 });
-</script>
-
-<script>
-    // Open Popup
-    function openPopup(imageSrc) {
-        const popup = document.getElementById("image-popup");
-        const popupImg = document.getElementById("popup-img");
-        popupImg.src = imageSrc;
-        popup.style.display = "flex";
-    }
-
-    // Close Popup
-    function closePopup() {
-        const popup = document.getElementById("image-popup");
-        popup.style.display = "none";
-    }
-
-    // Close Popup on Overlay Click
-    document.addEventListener("DOMContentLoaded", function () {
-        const popup = document.getElementById("image-popup");
-        if (popup) {
-            popup.addEventListener("click", function (e) {
-                if (e.target.id === "image-popup") {
-                    closePopup();
-                }
-            });
-        }
-    });
 </script>
 
 <?php get_footer(); ?>
