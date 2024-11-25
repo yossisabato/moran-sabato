@@ -741,18 +741,39 @@ form fieldset {
     }
 }
 
-/* Overlay for the popup */
+/* Popup Overlay */
 .popup-overlay {
-    display: none;
+    display: none; /* Hidden by default */
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    z-index: 1000;
-    justify-content: center;
-    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8); /* Dark background with transparency */
+    z-index: 1000; /* Bring it to the front */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    padding: 20px; /* Add some padding */
+    box-sizing: border-box; /* Include padding in size calculations */
+}
+
+/* Popup Image */
+.popup-content img {
+    width: 100%; /* Full width of the container */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove extra spaces below images */
+    border-radius: 10px; /* Optional: rounded corners */
+}
+
+/* Popup Content */
+.popup-content {
+    position: relative; /* For the close button positioning */
+    max-width: 90%; /* Limit width to 90% of the screen */
+    max-height: 90%; /* Limit height to 90% of the screen */
+    background-color: #fff; /* Optional: white background for the popup content */
+    border-radius: 10px; /* Rounded corners */
+    overflow: hidden; /* Ensure the image fits within the container */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add some depth */
 }
 
 /* Popup image styling */
@@ -763,16 +784,24 @@ form fieldset {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
-/* Close button styling */
+/* Close Button */
 .close-btn {
     position: absolute;
     top: 10px;
-    right: 20px;
-    font-size: 2rem;
-    color: white;
+    right: 10px;
+    font-size: 1.5rem; /* Adjust size */
+    color: #fff; /* White color */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    padding: 5px 10px;
+    border-radius: 50%; /* Circular shape */
     cursor: pointer;
-    font-weight: bold;
-    z-index: 1001;
+    z-index: 1001; /* Ensure it stays above the image */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+.close-btn:hover {
+    background-color: rgba(255, 255, 255, 0.7); /* Light background on hover */
+    color: #000; /* Darker text color */
 }
 
 /* Image styling within the gallery */
