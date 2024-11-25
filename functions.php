@@ -21,16 +21,3 @@ function enqueue_popup_script() {
     wp_enqueue_script('popup-js', get_template_directory_uri() . '/js/popup.js', array(), '1.0.0', true);
 }
 add_action('wp_enqueue_scripts', 'enqueue_popup_script');
-
-document.addEventListener("DOMContentLoaded", function() {
-    const successMessage = document.getElementById("success-message");
-    const errorMessage = document.getElementById("error-message");
-
-    if (successMessage && successMessage.textContent.trim() !== "") {
-        alert(successMessage.textContent); // Pop-up for success
-    }
-
-    if (errorMessage && errorMessage.textContent.trim() !== "") {
-        alert(errorMessage.textContent); // Pop-up for error
-    }
-});
