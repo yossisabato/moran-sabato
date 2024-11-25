@@ -4,9 +4,9 @@
 get_header();
 ?>
 <h1>מורן סבתו</h1>
-<p>0525-8751769</p>
-<p><a href="mailto:morano20@gmail.com">morano20@gmail.com</a></p>
-<p>מודיעין | ירושלים</p>
+<h3>0525-8751769</h3>
+<h3><a href="mailto:morano20@gmail.com">morano20@gmail.com</a></h3>
+<h3>מודיעין | ירושלים</h3>
 
 <div class="container">
     <!-- Page Header -->
