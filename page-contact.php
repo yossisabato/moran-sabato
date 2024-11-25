@@ -5,6 +5,7 @@ $success_message = ''; // Initialize success message
 $error_message = ''; // Initialize error message
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    echo "Form submitted!";
     $name = sanitize_text_field($_POST['name']);
     $phone = sanitize_text_field($_POST['phone']);
     $email = sanitize_email($_POST['email']);
@@ -26,6 +27,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         'Content-Type: text/plain; charset=UTF-8',
         "מאת: $name <$email>"
     ];
+
+    if (!empty($success_message)) {
+    echo "Success: $success_message";
+}
+
+if (!empty($error_message)) {
+    echo "Error: $error_message";
+}
 
     if (wp_mail($to, $email_subject, $email_body, $headers)) {
         $success_message = "תודה שפנית למורן! אצור איתך קשר בהקדם.";
@@ -68,6 +77,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <!-- Hidden fields for messages -->
     <div id="success-message" class="hidden"><?php echo esc_html($success_message); ?></div>
     <div id="error-message" class="hidden"><?php echo esc_html($error_message); ?></div>
+
+    <?php if (!empty($success_message)) : ?>
+    <div id="success-message" class="hidden"><?php echo esc_html($success_message); ?></div>
+<?php endif; ?>
+
+<?php if (!empty($error_message)) : ?>
+    <div id="error-message" class="hidden"><?php echo esc_html($error_message); ?></div>
+<?php endif; ?>
+
 </div>
 
 <!-- Add JavaScript before the footer -->
