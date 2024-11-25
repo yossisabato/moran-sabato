@@ -54,7 +54,7 @@ if (!empty($error_message)) {
         <img src="http://moransabato.local/wp-content/uploads/2024/11/Moran-scaled.jpg" alt="Moran Sabato" class="contact-image" onclick="openPopup(this.src)" />
     </div>
     <div class="logo-container">
-        <img src="http://moransabato.local/wp-content/uploads/2024/11/moran-logo.png" alt="Logo" class="contact-logo" />
+        <img src="http://moransabato.local/wp-content/uploads/2024/11/moran-logo.png" alt="Logo" class="contact-logo" onclick="openPopup(this.src) />
     </div>
 </div>
     <form action="" method="POST">
@@ -114,6 +114,39 @@ document.addEventListener("DOMContentLoaded", function() {
         alert(errorMessage.textContent); // Pop-up for error
     }
 });
+</script>
+<div id="image-popup" class="popup-overlay" style="display:none;">
+    <div class="popup-content">
+        <span class="close-btn" onclick="closePopup()">×</span>
+        <img id="popup-img" src="" alt="Popup Image" />
+    </div>
+</div>
+<script>
+    // Open Popup
+    function openPopup(imageSrc) {
+        const popup = document.getElementById("image-popup");
+        const popupImg = document.getElementById("popup-img");
+        popupImg.src = imageSrc;
+        popup.style.display = "flex";
+    }
+
+    // Close Popup
+    function closePopup() {
+        const popup = document.getElementById("image-popup");
+        popup.style.display = "none";
+    }
+
+    // Close Popup on Overlay Click
+    document.addEventListener("DOMContentLoaded", function () {
+        const popup = document.getElementById("image-popup");
+        if (popup) {
+            popup.addEventListener("click", function (e) {
+                if (e.target.id === "image-popup") {
+                    closePopup();
+                }
+            });
+        }
+    });
 </script>
 
 <?php get_footer(); ?>
