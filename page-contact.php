@@ -77,9 +77,12 @@ get_header();
 </div>
 
 <div id="image-popup" class="popup-overlay">
-    <span class="close-btn" onclick="closePopup()">×</span>
-    <img id="popup-img" src="" alt="Popup Image" />
+    <div class="popup-content">
+        <span class="close-btn" onclick="closePopup()">×</span>
+        <img id="popup-img" src="" alt="Popup Image" />
+    </div>
 </div>
+
 
 <?php
 get_footer();
