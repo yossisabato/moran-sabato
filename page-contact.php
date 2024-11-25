@@ -44,7 +44,19 @@ if (!empty($error_message)) {
 }
 ?>
 
+<h1> 0528-751769 מורן סבתו</h1>
+<h3><a href="mailto:morano20@gmail.com">morano20@gmail.com</a></h3>
+<h3>מודיעין | ירושלים</h3>
 <div class="container">
+    <!-- Page Header -->
+    <div class="contact-header">
+    <div class="image-container">
+        <img src="http://moransabato.local/wp-content/uploads/2024/11/Moran-scaled.jpg" alt="Moran Sabato" class="contact-image" onclick="openPopup(this.src)" />
+    </div>
+    <div class="logo-container">
+        <img src="http://moransabato.local/wp-content/uploads/2024/11/moran-logo.png" alt="Logo" class="contact-logo" />
+    </div>
+</div>
     <form action="" method="POST">
         <label for="name">שם *:</label>
         <input type="text" id="name" name="name" required>
