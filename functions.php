@@ -16,3 +16,8 @@ function moran_sabato_scripts() {
     wp_enqueue_style( 'style', get_stylesheet_uri() );
 }
 add_action( 'wp_enqueue_scripts', 'moran_sabato_scripts' );
+
+function enqueue_popup_script() {
+    wp_enqueue_script('popup-js', get_template_directory_uri() . '/js/popup.js', array(), '1.0.0', true);
+}
+add_action('wp_enqueue_scripts', 'enqueue_popup_script');
