@@ -9,10 +9,23 @@ get_header();
 <h3>מודיעין | ירושלים</h3>
 
 <div class="container">
-    <!-- Page Header -->
+    <!-- Page Header
     <div class="page-header">
         <img src="http://moransabato.local/wp-content/uploads/2024/11/moran-logo.png" alt="Logo" class="logo">
         <img src="http://moransabato.local/wp-content/uploads/2024/11/Moran-scaled.jpg" alt="Moran Sabato" class="image">
+    </div>
+    -->
+    <div class="image-popup-container">
+        <img src="http://moransabato.local/wp-content/uploads/2024/11/moran-logo.png" alt="Logo" class="popup-image" />
+    </div>
+ 
+    <div class="image-popup-container">
+        <img src="http://moransabato.local/wp-content/uploads/2024/11/Moran-scaled.jpg" alt="Moran Sabato" class="popup-image" />
+    </div>
+
+    <div id="image-popup" class="popup-overlay">
+        <span class="close-btn" onclick="closePopup()">×</span>
+        <img id="popup-img" src="" alt="Popup Image" />
     </div>
 
     <!-- Contact Form -->
@@ -71,3 +84,25 @@ get_header();
 <?php
 get_footer();
 ?>
+
+// Open the popup
+function openPopup(imgSrc) {
+    const popup = document.getElementById("image-popup");
+    const popupImg = document.getElementById("popup-img");
+    popup.style.display = "flex";
+    popupImg.src = imgSrc;
+}
+
+// Close the popup
+function closePopup() {
+    const popup = document.getElementById("image-popup");
+    popup.style.display = "none";
+}
+
+// Add click event to all images
+document.querySelectorAll(".popup-image").forEach((image) => {
+    image.addEventListener("click", function () {
+        openPopup(this.src);
+    });
+});
+
