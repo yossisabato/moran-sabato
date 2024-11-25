@@ -1,9 +1,14 @@
 <?php
- // Start session to retrieve messages
+get_header();
+
+// Initialize success and error messages
+$success_message = '';
+$error_message = '';
+
+// Start the session to store messages
 if (!session_id()) {
     session_start();
 }
-get_header();
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {    
     $name = sanitize_text_field($_POST['name']);
@@ -14,30 +19,35 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $subject = sanitize_text_field($_POST['subject']);
     $message = sanitize_textarea_field($_POST['message']);
 
+    // Email details
     $to = 'morano20@gmail.com';
     $email_subject = "פנייה חדשה מהאתר: " . $subject;
-    $email_body = "שם: $name\n";
-    $email_body .= "טלפון: $phone\n";
-    $email_body .= "Email: $email\n";
-    $email_body .= "כתובת: $address\n";
-    $email_body .= "קליניקה מועדפת: $clinic\n";
-    $email_body .= "הודעה:\n$message\n";
-
+    $email_body = "שם: $name\nטלפון: $phone\nEmail: $email\nכתובת: $address\nקליניקה: $clinic\n\nהודעה:\n$message";
     $headers = [
         'Content-Type: text/plain; charset=UTF-8',
-        "מאת: $name <$email>"
+        "From: $name <$email>"
     ];
 
+    // Attempt to send email
     if (wp_mail($to, $email_subject, $email_body, $headers)) {
         $_SESSION['success_message'] = "תודה שפנית למורן! אצור איתך קשר בהקדם.";
-            header("Location: " . site_url('/')); // Redirect to the home page
-          exit();
+        wp_safe_redirect(home_url('/')); // Redirect after successful submission
+        exit;
     } else {
         $_SESSION['error_message'] = "שליחת הטופס נכשלה. אנא נסה שוב מאוחר יותר, ניתן לשלוח ווטסאפ ל 0528-751769.";
+    wp_safe_redirect(home_url('/contact'));
+        exit;
     }
-  // Redirect back to the same page to show messages and reset form
-    wp_safe_redirect(home_url('/'));
-    exit;
+}
+ // Display any session messages
+if (!empty($_SESSION['success_message'])) {
+    $success_message = $_SESSION['success_message'];
+    unset($_SESSION['success_message']);
+}
+
+if (!empty($_SESSION['error_message'])) {
+    $error_message = $_SESSION['error_message'];
+    unset($_SESSION['error_message']);
 }
 ?>
 
@@ -54,45 +64,41 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <img src="http://moransabato.local/wp-content/uploads/2024/11/moran-logo.png" alt="Logo" class="contact-logo" style="width: 200px; border-radius: 10px;">
     </div>
 
-    <!-- Display Success or Error Messages -->
-    <?php if (!empty($_SESSION['success_message'])) : ?>
-        <div class="success-message"><?php echo $_SESSION['success_message']; ?></div>
-        <?php unset($_SESSION['success_message']); // Clear the message ?>
-    <?php endif; ?>
-
-    <?php if (!empty($_SESSION['error_message'])) : ?>
-        <div class="error-message"><?php echo $_SESSION['error_message']; ?></div>
-        <?php unset($_SESSION['error_message']); // Clear the message ?>
+    <!-- Display Messages -->
+    <?php if ($success_message): ?>
+        <div class="success-message"><?php echo $success_message; ?></div>
+    <?php elseif ($error_message): ?>
+        <div class="error-message"><?php echo $error_message; ?></div>
     <?php endif; ?>
 
     <!-- Contact Form -->
-    <form action="" method="POST" style="background-color: #FDF6E3; padding: 20px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+    <form action="" method="POST">
         <label for="name">שם *:</label>
-        <input type="text" id="name" name="name" required style="width: 100%; margin-bottom: 10px; padding: 10px; border-radius: 5px;">
+        <input type="text" id="name" name="name" required>
 
         <label for="phone">מספר טלפון *:</label>
-        <input type="tel" id="phone" name="phone" required style="width: 100%; margin-bottom: 10px; padding: 10px; border-radius: 5px;">
+        <input type="tel" id="phone" name="phone" required>
 
         <label for="email">אימייל:</label>
-        <input type="email" id="email" name="email" style="width: 100%; margin-bottom: 10px; padding: 10px; border-radius: 5px;">
+        <input type="email" id="email" name="email">
 
         <label for="address">כתובת:</label>
-        <input type="text" id="address" name="address" style="width: 100%; margin-bottom: 10px; padding: 10px; border-radius: 5px;">
+        <input type="text" id="address" name="address">
 
-        <label for="clinic">קליניקה :</label>
-        <select id="clinic" name="clinic" style="width: 100%; margin-bottom: 10px; padding: 10px; border-radius: 5px;">
+        <label for="clinic">קליניקה:</label>
+        <select id="clinic" name="clinic">
             <option value="modiin">מודיעין</option>
             <option value="jerusalem">ירושלים</option>
             <option value="else">אחר</option>
         </select>
 
         <label for="subject">נושא הפנייה:</label>
-        <input type="text" id="subject" name="subject" style="width: 100%; margin-bottom: 10px; padding: 10px; border-radius: 5px;">
+        <input type="text" id="subject" name="subject">
 
         <label for="message">הודעה:</label>
-        <textarea id="message" name="message" rows="4" style="width: 100%; margin-bottom: 10px; padding: 10px; border-radius: 5px;"></textarea>
+        <textarea id="message" name="message" rows="4"></textarea>
 
-        <button type="submit" style="background-color: #D4A59A; color: white; padding: 10px 20px; border: none; border-radius: 5px;">שלח</button>
+        <button type="submit" class="submit-button">שלח</button>
     </form>
 </div>
 
