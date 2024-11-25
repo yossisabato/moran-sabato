@@ -592,3 +592,97 @@ section {
     background-color: #A3B9A4; /* Softer green hover color */
     transform: scale(1.05); /* Slight zoom on hover */
 }
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #FAF3E0;
+    color: #4A4A4A;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.page-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.page-header img {
+    max-width: 150px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.static-info {
+    background-color: #FDF6E3;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.static-info p {
+    margin: 10px 0;
+    font-size: 1.2rem;
+}
+
+form {
+    background-color: #FFF;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+form input, form textarea, form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #D4A59A;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+form textarea {
+    resize: vertical;
+}
+
+.submit-button {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: #D4A59A;
+    color: #FFF;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #A3B9A4;
+}
+
+.success-message {
+    background-color: #DFF0D8;
+    color: #3C763D;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 20px;
+}
+
