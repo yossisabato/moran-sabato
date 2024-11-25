@@ -1,13 +1,9 @@
 <?php
-/* Template Name: Contact Page */
-
 get_header();
 ?>
-<h1>מורן סבתו</h1>
-<h3>0525-8751769</h3>
+<h1> 0528-751769 מורן סבתו</h1>
 <h3><a href="mailto:morano20@gmail.com">morano20@gmail.com</a></h3>
 <h3>מודיעין | ירושלים</h3>
-
 <div class="container">
     <!-- Page Header -->
     <div class="contact-header">
@@ -22,10 +18,10 @@ get_header();
 
     <!-- Contact Form -->
     <form action="" method="POST">
-        <label for="name">שם (חובה):</label>
+        <label for="name">שם *:</label>
         <input type="text" id="name" name="name" required>
 
-        <label for="phone">מספר טלפון (חובה):</label>
+        <label for="phone">מספר טלפון *:</label>
         <input type="tel" id="phone" name="phone" required>
 
         <label for="email">אימייל:</label>
@@ -34,12 +30,11 @@ get_header();
         <label for="address">כתובת:</label>
         <input type="text" id="address" name="address">
 
-        <label for="clinic">קליניקה נדרשת:</label>
+        <label for="clinic">קליניקה :</label>
         <select id="clinic" name="clinic">
-            <option value="jerusalem">ירושלים</option>
             <option value="modiin">מודיעין</option>
+            <option value="jerusalem">ירושלים</option>
             <option value="modiin">אחר</option>
-
         </select>
 
         <label for="subject">נושא הפנייה:</label>
