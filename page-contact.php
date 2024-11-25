@@ -64,7 +64,7 @@
         <select id="clinic" name="clinic">
             <option value="modiin">מודיעין</option>
             <option value="jerusalem">ירושלים</option>
-            <option value="modiin">אחר</option>
+            <option value="Else">אחר</option>
         </select>
 
         <label for="subject">נושא הפנייה:</label>
