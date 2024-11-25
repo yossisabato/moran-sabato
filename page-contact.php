@@ -1,27 +1,35 @@
-<?php
-get_header();
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $name = $_POST['name'];
-    $phone = $_POST['phone'];
-    $email = $_POST['email'];
-    $address = $_POST['address'];
-    $clinic = $_POST['clinic'];
-    $subject = $_POST['subject'];
-    $message = $_POST['message'];
-
-    // Send email
-    $to = "morano20@gmail.com";
-    $headers = "מאת: $email";
-    $email_subject = "פנייה חדשה מהאתר - $subject";
-    $email_body = "שם: $name\nטלפון: $phone\nאימייל: $email\nכתובת: $address\nקליניקה: $clinic\nנושא:\n$message";
-
-    if (mail($to, $email_subject, $email_body, $headers)) {
-        $success_message = "תודה שפנית למורן, אצור איתך קשר בהקדם";
-    } else {
-        $error_message = "שליחת הטופס נכשלה. אנא נסה שוב מאוחר יותר.";
+    <?php
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $name = sanitize_text_field($_POST['name']);
+        $phone = sanitize_text_field($_POST['phone']);
+        $email = sanitize_email($_POST['email']);
+        $address = sanitize_text_field($_POST['address']);
+        $clinic = sanitize_text_field($_POST['clinic']);
+        $subject = sanitize_text_field($_POST['subject']);
+        $message = sanitize_textarea_field($_POST['message']);
+    
+        $to = 'morano20@gmail.com'; // Your target email
+        $email_subject = "פנייה חדשה מהאתר: " . $subject;
+        $email_body = "שם: $name\n";
+        $email_body .= "טלפון: $phone\n";
+        $email_body .= "Email: $email\n";
+        $email_body .= "כתובת: $address\n";
+        $email_body .= "קליניקה מועדפת: $clinic\n";
+        $email_body .= "הודעה:\n$message\n";
+    
+        $headers = [
+            'Content-Type: text/plain; charset=UTF-8',
+            "מאת: $name <$email>"
+        ];
+    
+        if (wp_mail($to, $email_subject, $email_body, $headers)) {
+            echo '<p class="success-message">תודה שפנית למורן! אצור איתך קשר בהקדם.</p>';
+        } else {
+            echo '<p class="error-message"> שליחת הטופס נכשלה. אנא נסה שוב מאוחר יותר, ניתן לשלוח ווטסאפ ל 0528-751769.</p>';
+        }
     }
-}
 ?>
+
 
 <h1> 0528-751769 מורן סבתו</h1>
 <h3><a href="mailto:morano20@gmail.com">morano20@gmail.com</a></h3>
