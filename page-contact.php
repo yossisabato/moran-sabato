@@ -38,7 +38,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $_SESSION['error_message'] = "שליחת הטופס נכשלה. אנא נסה שוב מאוחר יותר, ניתן לשלוח ווטסאפ ל 0528-751769.";
     }
   // Redirect back to the same page to show messages and reset form
-    wp_safe_redirect(home_url('/contact'));
+    wp_safe_redirect(home_url('http://moransabato.local/'));
     exit;
 }
 
@@ -111,7 +111,7 @@ unset($_SESSION['success_message'], $_SESSION['error_message']);
     </form>
 </div>
 
-<!-- Optional: Remove this if you don't want alerts -->
+<!-- Optional: Remove this if you don't want alerts 
 <script>
 document.addEventListener("DOMContentLoaded", function() {
     const successMessage = "<?php echo esc_js($success_message); ?>";
@@ -126,5 +126,5 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 });
 </script>
-
+-->
 <?php get_footer(); ?>
