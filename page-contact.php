@@ -5,6 +5,11 @@ $success_message = ''; // Initialize success message
 $error_message = ''; // Initialize error message
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+      // Start a session to store messages
+    if (!session_id()) {
+        session_start();
+    }
+    
     $name = sanitize_text_field($_POST['name']);
     $phone = sanitize_text_field($_POST['phone']);
     $email = sanitize_email($_POST['email']);
@@ -28,11 +33,25 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     ];
 
     if (wp_mail($to, $email_subject, $email_body, $headers)) {
-        $success_message = "תודה שפנית למורן! אצור איתך קשר בהקדם.";
+        $_SESSION['success_message'] = "תודה שפנית למורן! אצור איתך קשר בהקדם.";
     } else {
-        $error_message = "שליחת הטופס נכשלה. אנא נסה שוב מאוחר יותר, ניתן לשלוח ווטסאפ ל 0528-751769.";
+        $_SESSION['error_message'] = "שליחת הטופס נכשלה. אנא נסה שוב מאוחר יותר, ניתן לשלוח ווטסאפ ל 0528-751769.";
     }
+  // Redirect back to the same page to show messages and reset form
+    wp_safe_redirect(home_url('/contact'));
+    exit;
 }
+
+// Start session to retrieve messages
+if (!session_id()) {
+    session_start();
+}
+
+$success_message = $_SESSION['success_message'] ?? '';
+$error_message = $_SESSION['error_message'] ?? '';
+
+// Clear messages after displaying
+unset($_SESSION['success_message'], $_SESSION['error_message']);
 ?>
 
 <div class="container">
