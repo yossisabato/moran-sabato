@@ -76,6 +76,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </div>
 </div>
 
+<?php if (!empty($success_message)) : ?>
+    <div class="success-message"><?php echo $success_message; ?></div>
+<?php endif; ?>
+
+<?php if (!empty($error_message)) : ?>
+    <div class="error-message"><?php echo $error_message; ?></div>
+<?php endif; ?>
+
 
 <?php
 get_footer();
