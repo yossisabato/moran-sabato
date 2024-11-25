@@ -38,7 +38,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $_SESSION['error_message'] = "שליחת הטופס נכשלה. אנא נסה שוב מאוחר יותר, ניתן לשלוח ווטסאפ ל 0528-751769.";
     }
   // Redirect back to the same page to show messages and reset form
-    wp_safe_redirect(home_url('http://moransabato.local/'));
+    wp_safe_redirect(home_url('/'));
     exit;
 }
 
