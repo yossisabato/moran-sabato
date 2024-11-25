@@ -1,15 +1,11 @@
 <?php
+ // Start session to retrieve messages
+if (!session_id()) {
+    session_start();
+}
 get_header();
 
-$success_message = ''; // Initialize success message
-$error_message = ''; // Initialize error message
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-      // Start a session to store messages
-    if (!session_id()) {
-        session_start();
-    }
-    
+if ($_SERVER["REQUEST_METHOD"] == "POST") {    
     $name = sanitize_text_field($_POST['name']);
     $phone = sanitize_text_field($_POST['phone']);
     $email = sanitize_email($_POST['email']);
@@ -34,6 +30,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if (wp_mail($to, $email_subject, $email_body, $headers)) {
         $_SESSION['success_message'] = "תודה שפנית למורן! אצור איתך קשר בהקדם.";
+            header("Location: " . site_url('/')); // Redirect to the home page
+          exit();
     } else {
         $_SESSION['error_message'] = "שליחת הטופס נכשלה. אנא נסה שוב מאוחר יותר, ניתן לשלוח ווטסאפ ל 0528-751769.";
     }
@@ -41,17 +39,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     wp_safe_redirect(home_url('/'));
     exit;
 }
-
-// Start session to retrieve messages
-if (!session_id()) {
-    session_start();
-}
-
-$success_message = $_SESSION['success_message'] ?? '';
-$error_message = $_SESSION['error_message'] ?? '';
-
-// Clear messages after displaying
-unset($_SESSION['success_message'], $_SESSION['error_message']);
 ?>
 
 <div class="container">
@@ -68,16 +55,14 @@ unset($_SESSION['success_message'], $_SESSION['error_message']);
     </div>
 
     <!-- Display Success or Error Messages -->
-    <?php if (!empty($success_message)) : ?>
-        <div class="success-message" style="background-color: #DFF0D8; color: #3C763D; padding: 15px; border-radius: 5px; margin-bottom: 20px;">
-            <?php echo $success_message; ?>
-        </div>
+    <?php if (!empty($_SESSION['success_message'])) : ?>
+        <div class="success-message"><?php echo $_SESSION['success_message']; ?></div>
+        <?php unset($_SESSION['success_message']); // Clear the message ?>
     <?php endif; ?>
 
-    <?php if (!empty($error_message)) : ?>
-        <div class="error-message" style="background-color: #F2DEDE; color: #A94442; padding: 15px; border-radius: 5px; margin-bottom: 20px;">
-            <?php echo $error_message; ?>
-        </div>
+    <?php if (!empty($_SESSION['error_message'])) : ?>
+        <div class="error-message"><?php echo $_SESSION['error_message']; ?></div>
+        <?php unset($_SESSION['error_message']); // Clear the message ?>
     <?php endif; ?>
 
     <!-- Contact Form -->
