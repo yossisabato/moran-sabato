@@ -22,20 +22,20 @@ function enqueue_popup_script() {
 }
 add_action('wp_enqueue_scripts', 'enqueue_popup_script');
 
+
 add_action('init', function() {
     if (isset($_GET['test_email'])) {
-        $to = 'your_email@gmail.com'; // Replace with your email
+        $to = 'yossi.sabto@gmail.com'; // Replace with your email
         $subject = 'Test Email';
-        $message = 'This is a test email from your WordPress site.';
+        $message = 'This is a test email from WordPress.';
         $headers = ['Content-Type: text/plain; charset=UTF-8'];
 
-        $sent = wp_mail($to, $subject, $message, $headers);
-        if ($sent) {
+        if (wp_mail($to, $subject, $message, $headers)) {
             echo 'Test email sent successfully.';
         } else {
-            echo 'Failed to send test email.';
+            echo 'Test email failed to send.';
         }
-        die;
+        die();
     }
 });
 
