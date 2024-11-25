@@ -48,6 +48,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <img src="http://moransabato.local/wp-content/uploads/2024/11/moran-logo.png" alt="Logo" class="contact-logo" style="width: 200px; border-radius: 10px;">
     </div>
 
+    <!-- Display Success or Error Messages -->
+    <?php if (!empty($success_message)) : ?>
+        <div class="success-message" style="background-color: #DFF0D8; color: #3C763D; padding: 15px; border-radius: 5px; margin-bottom: 20px;">
+            <?php echo $success_message; ?>
+        </div>
+    <?php endif; ?>
+
+    <?php if (!empty($error_message)) : ?>
+        <div class="error-message" style="background-color: #F2DEDE; color: #A94442; padding: 15px; border-radius: 5px; margin-bottom: 20px;">
+            <?php echo $error_message; ?>
+        </div>
+    <?php endif; ?>
+
     <!-- Contact Form -->
     <form action="" method="POST" style="background-color: #FDF6E3; padding: 20px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
         <label for="name">שם *:</label>
@@ -77,18 +90,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         <button type="submit" style="background-color: #D4A59A; color: white; padding: 10px 20px; border: none; border-radius: 5px;">שלח</button>
     </form>
-
-    <!-- Success/Error Messages -->
-    <?php if (!empty($success_message)) : ?>
-        <p style="color: green; font-weight: bold;"><?php echo esc_html($success_message); ?></p>
-    <?php endif; ?>
-
-    <?php if (!empty($error_message)) : ?>
-        <p style="color: red; font-weight: bold;"><?php echo esc_html($error_message); ?></p>
-    <?php endif; ?>
 </div>
 
-<!-- Add JavaScript -->
+<!-- Optional: Remove this if you don't want alerts -->
+<!-- 
 <script>
 document.addEventListener("DOMContentLoaded", function() {
     const successMessage = "<?php echo esc_js($success_message); ?>";
@@ -103,5 +108,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 });
 </script>
+-->
+
 
 <?php get_footer(); ?>
