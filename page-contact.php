@@ -3,6 +3,7 @@
 
 get_header();
 ?>
+<h1>Contact Page Template</h1>
 
 <div class="container">
     <!-- Page Header -->
