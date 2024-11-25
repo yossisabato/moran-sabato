@@ -33,6 +33,8 @@ get_header();
         <select id="clinic" name="clinic">
             <option value="jerusalem">ירושלים</option>
             <option value="modiin">מודיעין</option>
+            <option value="modiin">אחר</option>
+
         </select>
 
         <label for="subject">נושא הפנייה:</label>
