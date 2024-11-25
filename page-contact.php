@@ -1,14 +1,14 @@
 <?php
+// Start the session at the very beginning of the script
+if (!session_id()) {
+    session_start();
+}
+
 get_header();
 
 // Initialize success and error messages
 $success_message = '';
 $error_message = '';
-
-// Start the session to store messages
-if (!session_id()) {
-    session_start();
-}
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {    
     $name = sanitize_text_field($_POST['name']);
@@ -50,7 +50,6 @@ if (!empty($_SESSION['error_message'])) {
     unset($_SESSION['error_message']);
 }
 ?>
-
 <div class="container">
     <!-- Page Header -->
     <div class="contact-header" style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 30px;">
@@ -70,7 +69,6 @@ if (!empty($_SESSION['error_message'])) {
     <?php elseif ($error_message): ?>
         <div class="error-message"><?php echo $error_message; ?></div>
     <?php endif; ?>
-
     <!-- Contact Form -->
     <form action="" method="POST">
         <label for="name">שם *:</label>
