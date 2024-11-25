@@ -23,11 +23,6 @@ get_header();
         <img src="http://moransabato.local/wp-content/uploads/2024/11/Moran-scaled.jpg" alt="Moran Sabato" class="popup-image" />
     </div>
 
-    <div id="image-popup" class="popup-overlay">
-        <span class="close-btn" onclick="closePopup()">×</span>
-        <img id="popup-img" src="" alt="Popup Image" />
-    </div>
-
     <!-- Contact Form -->
     <form action="" method="POST">
         <label for="name">שם (חובה):</label>
