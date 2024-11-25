@@ -9,19 +9,16 @@ get_header();
 <h3>מודיעין | ירושלים</h3>
 
 <div class="container">
-    <!-- Page Header
-    <div class="page-header">
-        <img src="http://moransabato.local/wp-content/uploads/2024/11/moran-logo.png" alt="Logo" class="logo">
-        <img src="http://moransabato.local/wp-content/uploads/2024/11/Moran-scaled.jpg" alt="Moran Sabato" class="image">
+    <!-- Page Header -->
+    <div class="contact-header">
+    <div class="image-container">
+        <img src="http://moransabato.local/wp-content/uploads/2024/11/Moran-scaled.jpg" alt="Moran Sabato" class="contact-image" onclick="openPopup(this.src)" />
     </div>
-    -->
-    <div class="image-popup-container">
-        <img src="http://moransabato.local/wp-content/uploads/2024/11/moran-logo.png" alt="Logo" class="popup-image" />
+    <div class="logo-container">
+        <img src="http://moransabato.local/wp-content/uploads/2024/11/moran-logo.png" alt="Logo" class="contact-logo" />
     </div>
- 
-    <div class="image-popup-container">
-        <img src="http://moransabato.local/wp-content/uploads/2024/11/Moran-scaled.jpg" alt="Moran Sabato" class="popup-image" />
-    </div>
+</div>
+
 
     <!-- Contact Form -->
     <form action="" method="POST">
