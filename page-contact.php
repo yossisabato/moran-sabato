@@ -1,5 +1,6 @@
     <?php
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+get_header();
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $name = sanitize_text_field($_POST['name']);
         $phone = sanitize_text_field($_POST['phone']);
         $email = sanitize_email($_POST['email']);
