@@ -757,7 +757,7 @@ form fieldset {
 
 /* Reduce Image and Logo Size to 25% */
 .contact-image, .contact-logo {
-    max-width: 25%; /* Set to 25% of their original size */
+    max-width: 35%; /* Set to 25% of their original size */
     border-radius: 10px;
     cursor: pointer;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
@@ -766,7 +766,7 @@ form fieldset {
 
 /* Add Hover Effect */
 .contact-image:hover, .contact-logo:hover {
-    transform: scale(1.05); /* Slight zoom effect */
+    transform: scale(1.15); /* Slight zoom effect */
 }
 
 /* Popup Overlay */
