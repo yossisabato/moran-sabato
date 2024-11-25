@@ -70,4 +70,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <div id="error-message" class="hidden"><?php echo esc_html($error_message); ?></div>
 </div>
 
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const successMessage = document.getElementById("success-message");
+    const errorMessage = document.getElementById("error-message");
+
+    if (successMessage && successMessage.textContent.trim() !== "") {
+        alert(successMessage.textContent); // Pop-up for success
+    }
+
+    if (errorMessage && errorMessage.textContent.trim() !== "") {
+        alert(errorMessage.textContent); // Pop-up for error
+    }
+});
+</script>
+
 <?php get_footer(); ?>
