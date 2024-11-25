@@ -2,7 +2,7 @@
 function openPopup(imgSrc) {
     const popup = document.getElementById("image-popup");
     const popupImg = document.getElementById("popup-img");
-    popup.style.display = "flex";
+    popup.style.display = "flex"; // Use flex for centering
     popupImg.src = imgSrc;
 }
 
