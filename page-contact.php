@@ -5,7 +5,6 @@ $success_message = ''; // Initialize success message
 $error_message = ''; // Initialize error message
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    echo "Form submitted!";
     $name = sanitize_text_field($_POST['name']);
     $phone = sanitize_text_field($_POST['phone']);
     $email = sanitize_email($_POST['email']);
@@ -28,14 +27,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         "מאת: $name <$email>"
     ];
 
-    if (!empty($success_message)) {
-    echo "Success: $success_message";
-}
-
-if (!empty($error_message)) {
-    echo "Error: $error_message";
-}
-
     if (wp_mail($to, $email_subject, $email_body, $headers)) {
         $success_message = "תודה שפנית למורן! אצור איתך קשר בהקדם.";
     } else {
@@ -44,75 +35,71 @@ if (!empty($error_message)) {
 }
 ?>
 
-<h1> 0528-751769 מורן סבתו</h1>
-<h3><a href="mailto:morano20@gmail.com">morano20@gmail.com</a></h3>
-<h3>מודיעין | ירושלים</h3>
-
 <div class="container">
     <!-- Page Header -->
-    <div class="contact-header">
-    <div class="image-container">
-        <img src="http://moransabato.local/wp-content/uploads/2024/11/Moran-scaled.jpg" alt="Moran Sabato" class="contact-image" onclick="openPopup(this.src)" />
+    <div class="contact-header" style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 30px;">
+        <img src="http://moransabato.local/wp-content/uploads/2024/11/Moran-scaled.jpg" alt="Moran Sabato" class="contact-image" style="width: 200px; border-radius: 10px;">
+        <div class="contact-info" style="text-align: center;">
+            <h1 style="margin: 0;">מורן סבתו</h1>
+            <p style="margin: 0;">0528-751769</p>
+            <p style="margin: 0;"><a href="mailto:morano20@gmail.com">morano20@gmail.com</a></p>
+            <p style="margin: 0;">מודיעין | ירושלים</p>
+        </div>
+        <img src="http://moransabato.local/wp-content/uploads/2024/11/moran-logo.png" alt="Logo" class="contact-logo" style="width: 200px; border-radius: 10px;">
     </div>
-    <div class="logo-container">
-        <img src="http://moransabato.local/wp-content/uploads/2024/11/moran-logo.png" alt="Logo" class="contact-logo" onclick="openPopup(this.src) />
-    </div>
-</div>
-    <form action="" method="POST">
+
+    <!-- Contact Form -->
+    <form action="" method="POST" style="background-color: #FDF6E3; padding: 20px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
         <label for="name">שם *:</label>
-        <input type="text" id="name" name="name" required>
+        <input type="text" id="name" name="name" required style="width: 100%; margin-bottom: 10px; padding: 10px; border-radius: 5px;">
 
         <label for="phone">מספר טלפון *:</label>
-        <input type="tel" id="phone" name="phone" required>
+        <input type="tel" id="phone" name="phone" required style="width: 100%; margin-bottom: 10px; padding: 10px; border-radius: 5px;">
 
         <label for="email">אימייל:</label>
-        <input type="email" id="email" name="email">
+        <input type="email" id="email" name="email" style="width: 100%; margin-bottom: 10px; padding: 10px; border-radius: 5px;">
 
         <label for="address">כתובת:</label>
-        <input type="text" id="address" name="address">
+        <input type="text" id="address" name="address" style="width: 100%; margin-bottom: 10px; padding: 10px; border-radius: 5px;">
 
         <label for="clinic">קליניקה :</label>
-        <select id="clinic" name="clinic">
+        <select id="clinic" name="clinic" style="width: 100%; margin-bottom: 10px; padding: 10px; border-radius: 5px;">
             <option value="modiin">מודיעין</option>
             <option value="jerusalem">ירושלים</option>
-            <option value="Else">אחר</option>
+            <option value="else">אחר</option>
         </select>
 
         <label for="subject">נושא הפנייה:</label>
-        <input type="text" id="subject" name="subject">
+        <input type="text" id="subject" name="subject" style="width: 100%; margin-bottom: 10px; padding: 10px; border-radius: 5px;">
 
         <label for="message">הודעה:</label>
-        <textarea id="message" name="message" rows="4"></textarea>
+        <textarea id="message" name="message" rows="4" style="width: 100%; margin-bottom: 10px; padding: 10px; border-radius: 5px;"></textarea>
 
-        <button type="submit" class="submit-button">שלח</button>
+        <button type="submit" style="background-color: #D4A59A; color: white; padding: 10px 20px; border: none; border-radius: 5px;">שלח</button>
     </form>
 
-    <!-- Hidden fields for messages -->
-    <div id="success-message" class="hidden"><?php echo esc_html($success_message); ?></div>
-    <div id="error-message" class="hidden"><?php echo esc_html($error_message); ?></div>
-
+    <!-- Success/Error Messages -->
     <?php if (!empty($success_message)) : ?>
-    <div id="success-message" class="hidden"><?php echo esc_html($success_message); ?></div>
-<?php endif; ?>
+        <p style="color: green; font-weight: bold;"><?php echo esc_html($success_message); ?></p>
+    <?php endif; ?>
 
-<?php if (!empty($error_message)) : ?>
-    <div id="error-message" class="hidden"><?php echo esc_html($error_message); ?></div>
-<?php endif; ?>
-
+    <?php if (!empty($error_message)) : ?>
+        <p style="color: red; font-weight: bold;"><?php echo esc_html($error_message); ?></p>
+    <?php endif; ?>
 </div>
 
-<!-- Add JavaScript before the footer -->
+<!-- Add JavaScript -->
 <script>
 document.addEventListener("DOMContentLoaded", function() {
-    const successMessage = document.getElementById("success-message");
-    const errorMessage = document.getElementById("error-message");
+    const successMessage = "<?php echo esc_js($success_message); ?>";
+    const errorMessage = "<?php echo esc_js($error_message); ?>";
 
-    if (successMessage && successMessage.textContent.trim() !== "") {
-        alert(successMessage.textContent); // Pop-up for success
+    if (successMessage) {
+        alert(successMessage);
     }
 
-    if (errorMessage && errorMessage.textContent.trim() !== "") {
-        alert(errorMessage.textContent); // Pop-up for error
+    if (errorMessage) {
+        alert(errorMessage);
     }
 });
 </script>
