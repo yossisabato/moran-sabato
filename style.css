@@ -741,7 +741,7 @@ form fieldset {
     }
 }
 
-/* Side-by-Side Layout */
+/* Image and Logo Containers */
 .contact-header {
     display: flex;
     justify-content: space-between;
@@ -755,14 +755,16 @@ form fieldset {
     text-align: center;
 }
 
+/* Reduce Image and Logo Size to 25% */
 .contact-image, .contact-logo {
-    max-width: 67.5%; /* Reduced to 75% of the previous size */
+    max-width: 25%; /* Set to 25% of their original size */
     border-radius: 10px;
     cursor: pointer;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
 }
 
+/* Add Hover Effect */
 .contact-image:hover, .contact-logo:hover {
     transform: scale(1.05); /* Slight zoom effect */
 }
