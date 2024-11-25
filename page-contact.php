@@ -1,6 +1,28 @@
 <?php
 get_header();
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $name = $_POST['name'];
+    $phone = $_POST['phone'];
+    $email = $_POST['email'];
+    $address = $_POST['address'];
+    $clinic = $_POST['clinic'];
+    $subject = $_POST['subject'];
+    $message = $_POST['message'];
+
+    // Send email
+    $to = "morano20@gmail.com";
+    $headers = "מאת: $email";
+    $email_subject = "פנייה חדשה מהאתר - $subject";
+    $email_body = "שם: $name\nטלפון: $phone\nאימייל: $email\nכתובת: $address\nקליניקה: $clinic\nנושא:\n$message";
+
+    if (mail($to, $email_subject, $email_body, $headers)) {
+        $success_message = "תודה שפנית למורן, אצור איתך קשר בהקדם";
+    } else {
+        $error_message = "שליחת הטופס נכשלה. אנא נסה שוב מאוחר יותר.";
+    }
+}
 ?>
+
 <h1> 0528-751769 מורן סבתו</h1>
 <h3><a href="mailto:morano20@gmail.com">morano20@gmail.com</a></h3>
 <h3>מודיעין | ירושלים</h3>
@@ -46,28 +68,7 @@ get_header();
         <button type="submit" class="submit-button">שלח</button>
     </form>
 
-    <?php
-    // Handle form submission
-    if ($_SERVER["REQUEST_METHOD"] === "POST") {
-        $name = sanitize_text_field($_POST['name']);
-        $phone = sanitize_text_field($_POST['phone']);
-        $email = sanitize_email($_POST['email']);
-        $address = sanitize_text_field($_POST['address']);
-        $clinic = sanitize_text_field($_POST['clinic']);
-        $subject = sanitize_text_field($_POST['subject']);
-        $message = sanitize_textarea_field($_POST['message']);
-
-        $email_message = "שם: $name\nטלפון: $phone\nאימייל: $email\nכתובת: $address\nקליניקה: $clinic\nנושא: $subject\nהודעה: $message";
-
-        // Send email
-        wp_mail('morano20@gmail.com', 'New Contact Form Submission', $email_message);
-
-        // Redirect after submission
-        echo '<div class="success-message">תודה שפנית למורן, אצור איתך קשר בהקדם</div>';
-    }
-    ?>
-</div>
-
+</div>   
 <div id="image-popup" class="popup-overlay">
     <div class="popup-content">
         <span class="close-btn" onclick="closePopup()">×</span>
