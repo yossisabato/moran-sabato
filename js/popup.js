@@ -2,19 +2,19 @@
 function openPopup(imgSrc) {
     const popup = document.getElementById("image-popup");
     const popupImg = document.getElementById("popup-img");
-    popup.style.display = "flex"; // Use flex for centering
-    popupImg.src = imgSrc;
+    popup.style.display = "flex"; // Show popup
+    popupImg.src = imgSrc; // Set the image source
 }
 
 // Close the popup
 function closePopup() {
     const popup = document.getElementById("image-popup");
-    popup.style.display = "none";
+    popup.style.display = "none"; // Hide popup
 }
 
-// Add click event to all images
-document.querySelectorAll(".popup-image").forEach((image) => {
-    image.addEventListener("click", function () {
-        openPopup(this.src);
-    });
+// Ensure clicking outside the popup also closes it
+document.getElementById("image-popup").addEventListener("click", function (e) {
+    if (e.target === this) {
+        closePopup();
+    }
 });
