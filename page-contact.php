@@ -67,6 +67,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         <button type="submit" class="submit-button">שלח</button>
     </form>
+<?php echo do_shortcode('[contact_form_handler]'); ?>
 
 </div>   
 <div id="image-popup" class="popup-overlay">
