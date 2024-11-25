@@ -1,4 +1,5 @@
 // Open the popup
+/*
 function openPopup(imgSrc) {
     const popup = document.getElementById("image-popup");
     const popupImg = document.getElementById("popup-img");
@@ -18,3 +19,4 @@ document.getElementById("image-popup").addEventListener("click", function (e) {
         closePopup();
     }
 });
+*/
