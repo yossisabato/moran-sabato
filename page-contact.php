@@ -70,6 +70,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <div id="error-message" class="hidden"><?php echo esc_html($error_message); ?></div>
 </div>
 
+<!-- Add JavaScript before the footer -->
 <script>
 document.addEventListener("DOMContentLoaded", function() {
     const successMessage = document.getElementById("success-message");
