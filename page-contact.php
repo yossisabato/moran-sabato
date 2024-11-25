@@ -3,21 +3,16 @@
 
 get_header();
 ?>
-<h1>Contact Page Template</h1>
+<h1>מורן סבתו</h1>
+<p>0525-8751769</p>
+<p><a href="mailto:morano20@gmail.com">morano20@gmail.com</a></p>
+<p>מודיעין | ירושלים</p>
 
 <div class="container">
     <!-- Page Header -->
     <div class="page-header">
         <img src="http://moransabato.local/wp-content/uploads/2024/11/moran-logo.png" alt="Logo" class="logo">
         <img src="http://moransabato.local/wp-content/uploads/2024/11/Moran-scaled.jpg" alt="Moran Sabato" class="image">
-    </div>
-
-    <!-- Static Information -->
-    <div class="static-info">
-        <p><strong>מורן סבתו</strong></p>
-        <p>0525-8751769</p>
-        <p><a href="mailto:morano20@gmail.com">morano20@gmail.com</a></p>
-        <p>מודיעין | ירושלים</p>
     </div>
 
     <!-- Contact Form -->
