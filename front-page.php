@@ -35,7 +35,7 @@
     <img src="http://moransabato.local/wp-content/uploads/2024/11/lisa-yee-therapy-core-services-intimate-connection-building-icon.png" alt="Service Image" class="service-image">
     <div class="service-content">
         <h2 class="service-title">טיפול מיני</h2>
-        <p class="service-description">טיפול מיני בזוגות ויחידים במטרה לשפר את חיי המין./p>
+        <p class="service-description">טיפול מיני בזוגות ויחידים במטרה לשפר את חיי המין.</p>
         <a href="<?php echo site_url('/service/couples-therapy'); ?>" class="read-more-button">קרא עוד</a>
     </div>
 </section>
