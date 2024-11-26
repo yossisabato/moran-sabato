@@ -1,5 +1,4 @@
 <?php
-// Start the session at the very beginning of the script
 if (!session_id()) {
     session_start();
 }
