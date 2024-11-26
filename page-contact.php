@@ -25,7 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email_body = "שם: $name\nטלפון: $phone\nEmail: $email\nכתובת: $address\nקליניקה: $clinic\n\nהודעה:\n$message";
     $headers = [
         'Content-Type: text/plain; charset=UTF-8',
-        "From: $name <yossi.sabto@gmail.com>"
+        "From: Moran Sabato <yossi.sabto@gmail.com>"
     ];
 
     // Attempt to send email
