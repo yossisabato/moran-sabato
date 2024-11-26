@@ -778,25 +778,24 @@ form fieldset {
     transform: scale(1.15); /* Slight zoom effect */
 }
 
-/* Popup Overlay */
+/* Popup Overlay 
 .popup-overlay {
-    display: none; /* Hidden by default */
+    display: none; 
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.8); /* Dark overlay */
+    background-color: rgba(0, 0, 0, 0.8);
     justify-content: center;
     align-items: center;
-    z-index: 1000; /* Bring popup to front */
+    z-index: 1000; 
 }
 
-/* Popup Content */
 .popup-content {
     position: relative;
-    max-width: 90%; /* Responsive width */
-    max-height: 90%; /* Responsive height */
+    max-width: 90%; 
+    max-height: 90%; 
     overflow: hidden;
     border-radius: 10px;
 }
@@ -807,7 +806,7 @@ form fieldset {
     display: block;
     border-radius: 10px;
 }
-
+*/
 .close-btn {
     position: absolute;
     top: 10px;
