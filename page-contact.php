@@ -100,7 +100,7 @@ if (!empty($_SESSION['error_message'])) {
     </form>
 </div>
 
-<!-- Optional: Remove this if you don't want alerts 
+<!-- Optional: Remove this if you don't want alerts -->
 <script>
 document.addEventListener("DOMContentLoaded", function() {
     const successMessage = "<?php echo esc_js($success_message); ?>";
@@ -115,5 +115,4 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 });
 </script>
--->
 <?php get_footer(); ?>
