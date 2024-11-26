@@ -11,7 +11,7 @@
     <div class="site-logo">
  <!--   <img src="<?php echo esc_url('http://moransabato.local/wp-content/uploads/2024/11/moran-logo.png'); ?>" alt="<?php bloginfo('name'); ?>"> -->
     </div>
-    <nav>
+  <!--  <nav>
         <?php
         wp_nav_menu( array(
             'theme_location' => 'main-menu',
@@ -19,7 +19,7 @@
             'menu_class' => 'main-menu'
         ) );
         ?>
-    </nav>
+    </nav>  -->
     <nav class="main-navigation">
     <?php
     wp_nav_menu(array(
