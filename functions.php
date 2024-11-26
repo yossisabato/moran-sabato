@@ -17,14 +17,21 @@ function moran_sabato_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'moran_sabato_scripts' );
 
-//function enqueue_popup_script() {
-  //  wp_enqueue_script('popup-js', get_template_directory_uri() . '/js/popup.js', array('jquery'), '1.0.0', true);
-//}
-//add_action('wp_enqueue_scripts', 'enqueue_popup_script');
-
 // Start session globally
 add_action('init', function() {
     if (!session_id()) {
         session_start();
     }
 });
+
+function custom_wp_mail_from($original_email_address) {
+    return 'yossi.sabto@gmail.com'; // Replace with your SMTP authenticated email
+}
+
+function custom_wp_mail_from_name($original_email_from) {
+    return 'Moran Sabato'; // Replace with your desired "From Name"
+}
+
+add_filter('wp_mail_from', 'custom_wp_mail_from');
+add_filter('wp_mail_from_name', 'custom_wp_mail_from_name');
+
