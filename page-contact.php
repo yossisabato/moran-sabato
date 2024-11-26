@@ -4,6 +4,7 @@ if (!session_id()) {
 }
 
 get_header();
+echo 'Session ID: ' . session_id();
 
 // Initialize success and error messages
 $success_message = '';
