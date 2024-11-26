@@ -36,7 +36,7 @@
     <div class="service-content">
         <h2 class="service-title">טיפול מיני</h2>
         <p class="service-description">טיפול מיני בזוגות ויחידים במטרה לשפר את חיי המין.</p>
-        <a href="<?php echo site_url('/service/couples-therapy'); ?>" class="read-more-button">קרא עוד</a>
+        <a href="<?php echo site_url('/service/sexual-therapy'); ?>" class="read-more-button">קרא עוד</a>
     </div>
 </section>
     <section class="service-section">
@@ -44,7 +44,7 @@
     <div class="service-content">
         <h2 class="service-title">טיפול בטראומה</h2>
         <p class="service-description">טיפול בטראומה על מנת לעזור בהתמודדיות עם טראומות ולשיפור איכות החיים</p>
-        <a href="<?php echo site_url('/service/couples-therapy'); ?>" class="read-more-button">קרא עוד</a>
+        <a href="<?php echo site_url('/service/trauma-therapy'); ?>" class="read-more-button">קרא עוד</a>
     </div>
 </section>
     <section class="service-section">
@@ -52,7 +52,7 @@
     <div class="service-content">
         <h2 class="service-title">טיפול משפחתי</h2>
         <p class="service-description">טיפול משפחתי מסייע לשיפור הקשר המשפחתי והחיבורים בתוך המשפחה.</p>
-        <a href="<?php echo site_url('/service/couples-therapy'); ?>" class="read-more-button">קרא עוד</a>
+        <a href="<?php echo site_url('/service/family-therapy'); ?>" class="read-more-button">קרא עוד</a>
     </div>
 </section>
 <!--
