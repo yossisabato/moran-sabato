@@ -35,11 +35,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit;
     } else {
         $_SESSION['error_message'] = "שליחת הטופס נכשלה. אנא נסה שוב מאוחר יותר, ניתן לשלוח ווטסאפ ל 0528-751769.";
-    wp_safe_redirect(home_url('/contact'));
+        wp_safe_redirect(home_url('/contact/'));
         exit;
     }
 }
- // Display any session messages
+
+// Retrieve session messages
 if (!empty($_SESSION['success_message'])) {
     $success_message = $_SESSION['success_message'];
     unset($_SESSION['success_message']);
@@ -64,9 +65,7 @@ if (!empty($_SESSION['error_message'])) {
     </div>
     
     <!-- Contact Form -->
-<form action="<?php echo esc_url($_SERVER['REQUEST_URI']); ?>" method="POST">
-
-<!--    <form action="" method="POST"> -->
+    <form action="<?php echo esc_url($_SERVER['REQUEST_URI']); ?>" method="POST">
         <label for="name">שם *:</label>
         <input type="text" id="name" name="name" required>
 
@@ -97,26 +96,16 @@ if (!empty($_SESSION['error_message'])) {
 </div>
 
 <!-- Display Messages -->
-<?php if (isset($_SESSION['success_message'])): ?>
-    <div class="success-message">
-        <?php echo $_SESSION['success_message']; ?>
-        <?php unset($_SESSION['success_message']); ?>
+<?php if (!empty($success_message)) : ?>
+    <div class="success-message" style="background: #d4edda; padding: 10px; margin: 10px 0; border: 1px solid #c3e6cb; color: #155724;">
+        <?php echo $success_message; ?>
     </div>
 <?php endif; ?>
 
-<!-- Optional: Remove this if you don't want alerts -->
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-    const successMessage = "<?php echo esc_js($success_message); ?>";
-    const errorMessage = "<?php echo esc_js($error_message); ?>";
+<?php if (!empty($error_message)) : ?>
+    <div class="error-message" style="background: #f8d7da; padding: 10px; margin: 10px 0; border: 1px solid #f5c6cb; color: #721c24;">
+        <?php echo $error_message; ?>
+    </div>
+<?php endif; ?>
 
-    if (successMessage) {
-        alert(successMessage);
-    }
-
-    if (errorMessage) {
-        alert(errorMessage);
-    }
-});
-</script>
 <?php get_footer(); ?>
