@@ -1,27 +1,26 @@
 <?php get_header(); ?>
 <main>
-    <section>
-        <div class="site-logo">
-            <img src="<?php echo esc_url('http://moransabato.local/wp-content/uploads/2024/11/moran-logo.png'); ?>" alt="מרכז טיפולי מורן סבתו">
+    <section class="header-section">
+    <div class="images-container">
+        <div class="image-item">
+            <img src="http://moransabato.local/wp-content/uploads/2024/11/moran-logo.png" alt="מרכז טיפולי מורן סבתו">
         </div>
-        <h1>מרכז טיפולי - מורן סבתו</h1>
-    </section>
+        <div class="image-item">
+            <img src="http://moransabato.local/wp-content/uploads/2024/11/Moran-scaled.jpg" alt="מורן סבתו">
+        </div>
+    </div>
+</section>
 
-    <!-- New Section with Image and Description -->
-    <section class="intro">
-        <div class="intro-content">
-       <!--     <h2>מרכז טיפולי - מורן סבתו </h2> -->
-            <p>
-                מורן סבתו, מטפלת מינית, זוגית ומשפחתית מוסמכת בעלת תארים מהאוניברסיטה העברית, בר אילן, ומכון רותם.
-                טיפולים במגוון נושאים, טיפול מיני, זוגי, משפחתי, טיפול בטראומה, וטיפול בפגיעות מיניות (פוגעים ונפגעים).
-                הטיפולים בקליניקות פרטיות במודיעין ובירושלים.
-                שירות מקצועי ויחס אישי שיעזור לכם לשפר את חייכם
-            </p>
-        </div>
-        <div class="intro-image">
-            <img src="http://moransabato.local/wp-content/uploads/2024/11/Moran-scaled.jpg" alt="מרכז טיפולי מורן סבתו">
-        </div>
-    </section>
+<!-- Text Section -->
+<section class="text-section">
+    <h1>מרכז טיפולי - מורן סבתו</h1>
+    <p>
+        מורן סבתו, מטפלת מינית, זוגית ומשפחתית מוסמכת בעלת תארים מהאוניברסיטה העברית, בר אילן, ומכון רותם.
+        טיפולים במגוון נושאים, טיפול מיני, זוגי, משפחתי, טיפול בטראומה, וטיפול בפגיעות מיניות (פוגעים ונפגעים).
+        הטיפולים בקליניקות פרטיות במודיעין ובירושלים.
+        שירות מקצועי ויחס אישי שיעזור לכם לשפר את חייכם.
+    </p>
+</section>
 
     <div class="service">
     <div class="image-section" style="background-image: url('http://moransabato.local/wp-content/uploads/2024/11/couple-bg-1-1.jpg');"></div>
