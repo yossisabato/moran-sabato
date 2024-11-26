@@ -35,3 +35,11 @@ function custom_wp_mail_from_name($original_email_from) {
 add_filter('wp_mail_from', 'custom_wp_mail_from');
 add_filter('wp_mail_from_name', 'custom_wp_mail_from_name');
 
+function register_custom_menus() {
+    register_nav_menus(array(
+        'main-menu' => __('Main Menu'),
+    ));
+}
+add_action('init', 'register_custom_menus');
+
+
