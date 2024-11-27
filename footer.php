@@ -1,4 +1,8 @@
-<footer>
+<?php if (is_front_page()) : ?>
+    <?php include locate_template('footer-home.php'); ?>
+<?php else : ?>
+    <!-- Default footer content -->
+    <<footer>
     <!-- Contact Section -->
     <section class="contact-section">
         <h2>צור קשר</h2>
@@ -18,6 +22,8 @@
     </section>
     <p>&copy; <?php echo date("Y"); ?> מורן סבתו כל הזכויות שמורות 0528-751769 </p>
 </footer>
+<?php endif; ?>
+
 <?php wp_footer(); ?>
 <body>
     <!-- Add WhatsApp button here -->
