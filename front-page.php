@@ -69,7 +69,7 @@
 </section>
     <!-- Call-to-Action Section -->
     <section class="cta">
-        <h2>צרו קשר עוד היום</h2>
+        <h2>יצירת קשר</h2>
         <p>מתלבטים? צוות המטפלים שלנו כאן בשבילכם. צרו קשר עוד היום ונחזור אליכם בהקדם.</p>
         <a href="<?php echo site_url('/contact'); ?>" class="cta-button">צור קשר</a>
     </section>
