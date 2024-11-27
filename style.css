@@ -1042,3 +1042,38 @@ form fieldset {
     display: block;
 }
 
+.footer-home {
+    background-color: #f3f3f3;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-home h2 {
+    color: #d4a59a;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.footer-home p {
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.footer-home .social-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.footer-home .social-links li a {
+    text-decoration: none;
+    color: #d4a59a;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.footer-home .social-links li a:hover {
+    color: #b38781;
+}
