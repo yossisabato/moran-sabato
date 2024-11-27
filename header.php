@@ -7,36 +7,31 @@
     <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
-<!-- <header>
-    <div class="site-logo"> -->
- <!--   <img src="<?php echo esc_url('http://moransabato.local/wp-content/uploads/2024/11/moran-logo.png'); ?>" alt="<?php bloginfo('name'); ?>"> --
+<header class="site-header">
+    <div class="header-container" style="display: flex; align-items: center; justify-content: space-between; padding: 10px 20px;">
+        <!-- Logo Section -->
+        <div class="site-logo">
+            <a href="<?php echo home_url(); ?>">
+                <img src="http://moransabato.local/wp-content/uploads/2024/11/moran-logo.png" alt="מרכז טיפולי מורן סבתו" style="max-height: 100px;">
+            </a>
+        </div>
+
+        <!-- Profile Image Section -->
+        <div class="profile-image">
+            <img src="http://moransabato.local/wp-content/uploads/2024/11/Moran-scaled.jpg" alt="מורן סבתו" style="max-height: 100px; border-radius: 50%;">
+        </div>
     </div>
 
+    <!-- Navigation Menu -->
+    <nav class="main-navigation">
+        <?php
+        wp_nav_menu(array(
+            'theme_location' => 'main-menu',
+            'menu_class' => 'main-menu',
+            'container' => false,
+        ));
+        ?>
+    </nav>
 </header>
--->
-<header>
-    <div class="header-container" style="display: flex; align-items: center; justify-content: space-between; padding: 10px;">
-        <!-- Logo -->
-        <div class="site-logo" style="flex: 1; text-align: center;">
-            <a href="<?php echo home_url(); ?>">
-                <img src="http://moransabato.local/wp-content/uploads/2024/11/moran-logo.png" alt="מרכז טיפולי מורן סבתו" style="max-width: 150px; height: auto;">
-            </a>
-        </div>
-        <!-- Picture -->
-        <div class="image-item" style="flex: 1; text-align: center;">
-            <a href="<?php echo home_url(); ?>">
-                <img src="http://moransabato.local/wp-content/uploads/2024/11/Moran-scaled.jpg" alt="מורן סבתו" style="max-width: 150px; height: auto; border-radius: 50%; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);">
-            </a>
-        </div>
-        <!-- Navigation -->
-        <nav class="main-navigation" style="flex: 2; text-align: center;">
-            <?php
-            wp_nav_menu(array(
-                'theme_location' => 'main-menu',
-                'menu_class' => 'main-menu',
-            ));
-            ?>
-        </nav>
-    </div>
-</header>
+
 
