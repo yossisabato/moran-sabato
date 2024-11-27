@@ -20,7 +20,15 @@
             <button type="submit">שלח</button>
         </form>
     </section>
-    <p>&copy; <?php echo date("Y"); ?> מורן סבתו כל הזכויות שמורות 0528-751769 </p>
+    <section class="site-footer" style="background: #f5f5f5; padding: 10px; text-align: center; border-top: 1px solid #e0e0e0;">
+    <div class="footer-content" style="font-size: 14px; color: #666;">
+        <p>© 2024 מורן סבתו - כל הזכויות שמורות | טלפון: <a href="tel:0528751769" style="color: #666; text-decoration: none;">0528-751769</a></p>
+        <a href="https://wa.me/972528751769" class="whatsapp-icon" target="_blank" style="display: inline-block; margin-top: 5px;">
+            <img src="http://example.com/whatsapp-icon.png" alt="וואטסאפ" style="width: 25px; height: 25px; vertical-align: middle;">
+        </a>
+    </div>
+</section>
+
 </footer>
 <?php endif; ?>
 
