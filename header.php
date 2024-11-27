@@ -15,22 +15,28 @@
 </header>
 -->
 <header>
-    <div class="site-logo">
-        <a href="<?php echo home_url(); ?>">
-            <img src="http://moransabato.local/wp-content/uploads/2024/11/moran-logo.png" alt="מרכז טיפולי מורן סבתו" />
-        </a>
-    </div>
-    <div class="image-item">
-        <a href="<?php echo home_url(); ?>">
-            <img src="http://moransabato.local/wp-content/uploads/2024/11/Moran-scaled.jpg" alt="מורן סבתו">
-        </a>
+    <div class="header-container" style="display: flex; align-items: center; justify-content: space-between; padding: 10px;">
+        <!-- Logo -->
+        <div class="site-logo" style="flex: 1; text-align: center;">
+            <a href="<?php echo home_url(); ?>">
+                <img src="http://moransabato.local/wp-content/uploads/2024/11/moran-logo.png" alt="מרכז טיפולי מורן סבתו" style="max-width: 150px; height: auto;">
+            </a>
         </div>
-    <nav class="main-navigation">
-        <?php
-        wp_nav_menu(array(
-            'theme_location' => 'main-menu',
-            'menu_class' => 'main-menu',
-        ));
-        ?>
-    </nav>
+        <!-- Picture -->
+        <div class="image-item" style="flex: 1; text-align: center;">
+            <a href="<?php echo home_url(); ?>">
+                <img src="http://moransabato.local/wp-content/uploads/2024/11/Moran-scaled.jpg" alt="מורן סבתו" style="max-width: 150px; height: auto; border-radius: 50%; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);">
+            </a>
+        </div>
+        <!-- Navigation -->
+        <nav class="main-navigation" style="flex: 2; text-align: center;">
+            <?php
+            wp_nav_menu(array(
+                'theme_location' => 'main-menu',
+                'menu_class' => 'main-menu',
+            ));
+            ?>
+        </nav>
+    </div>
 </header>
+
