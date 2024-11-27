@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 <main>
-    <section class="header-section">
+<!--    <section class="header-section">
     <div class="images-container">
         <div class="image-item">
             <img src="http://moransabato.local/wp-content/uploads/2024/11/moran-logo.png" alt="מרכז טיפולי מורן סבתו">
@@ -9,7 +9,7 @@
             <img src="http://moransabato.local/wp-content/uploads/2024/11/Moran-scaled.jpg" alt="מורן סבתו">
         </div>
     </div>
-</section>
+</section> -->
 
 <!-- Text Section -->
 <section class="text-section">
