@@ -1,4 +1,16 @@
 <?php get_header(); ?>
+<section class="intro">
+    <div class="intro-content" style="text-align: center; padding: 20px; background-color: #FAF3E0; border-radius: 10px; margin: 20px auto; max-width: 800px;">
+        <h1 style="margin-bottom: 20px;">מרכז טיפולי - מורן סבתו</h1>
+        <p style="font-size: 1.2em; line-height: 1.8;">
+            מורן סבתו, מטפלת מינית, זוגית ומשפחתית מוסמכת בעלת תארים מהאוניברסיטה העברית, בר אילן, ומכון רותם.
+            טיפולים במגוון נושאים, טיפול מיני, זוגי, משפחתי, טיפול בטראומה, וטיפול בפגיעות מיניות (פוגעים ונפגעים).
+            הטיפולים בקליניקות פרטיות במודיעין ובירושלים.
+            שירות מקצועי ויחס אישי שיעזור לכם לשפר את חייכם.
+        </p>
+    </div>
+</section>
+
 <main>
 <!--    <section class="header-section">
     <div class="images-container">
@@ -11,7 +23,7 @@
     </div>
 </section> -->
 
-<!-- Text Section -->
+<!-- Text Section --
 <section class="text-section">
     <h1>מרכז טיפולי - מורן סבתו</h1>
     <p>
@@ -21,7 +33,7 @@
         שירות מקצועי ויחס אישי שיעזור לכם לשפר את חייכם.
     </p>
 </section>
-    
+    -->
 <section class="service-section">
     <img src="http://moransabato.local/wp-content/uploads/2024/11/couple-bg-1-1.jpg" alt="Service Image" class="service-image">
     <div class="service-content">
