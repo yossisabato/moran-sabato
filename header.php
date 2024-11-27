@@ -20,6 +20,11 @@
             <img src="http://moransabato.local/wp-content/uploads/2024/11/moran-logo.png" alt="מרכז טיפולי מורן סבתו" />
         </a>
     </div>
+    <div class="image-item">
+        <a href="<?php echo home_url(); ?>">
+            <img src="http://moransabato.local/wp-content/uploads/2024/11/Moran-scaled.jpg" alt="מורן סבתו">
+        </a>
+        </div>
     <nav class="main-navigation">
         <?php
         wp_nav_menu(array(
@@ -29,4 +34,3 @@
         ?>
     </nav>
 </header>
-
