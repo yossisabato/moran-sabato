@@ -75,4 +75,4 @@
     </section>
 
 </main>
-<<?php get_footer_front(); ?>
+<?php get_template_part('footer', 'home'); ?>
