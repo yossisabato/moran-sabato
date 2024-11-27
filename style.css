@@ -1077,3 +1077,69 @@ form fieldset {
 .footer-home .social-links li a:hover {
     color: #b38781;
 }
+
+/* Footer Styling */
+.site-footer {
+    background: #f5f5f5;
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid #e0e0e0;
+}
+
+.footer-contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding-bottom: 20px;
+}
+
+.footer-contact-form h2 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.footer-contact-form input,
+.footer-contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.footer-contact-form button {
+    background-color: #D4A59A;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.footer-contact-form button:hover {
+    background-color: #c5908a;
+}
+
+.footer-content {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+}
+
+.footer-content a {
+    color: #666;
+    text-decoration: none;
+}
+
+.footer-content a:hover {
+    color: #000;
+}
+
+.whatsapp-icon img {
+    width: 25px;
+    height: 25px;
+    vertical-align: middle;
+    margin-left: 5px;
+}
+
