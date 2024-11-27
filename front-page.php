@@ -75,5 +75,4 @@
     </section>
 
 </main>
-<!-- <?php get_footer_front(); ?> -->
-<?php include locate_template('footer-home.php'); ?>
+<<?php get_footer_front(); ?>
