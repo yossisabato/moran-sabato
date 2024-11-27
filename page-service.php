@@ -29,6 +29,12 @@ get_header();
     <a href="https://wa.me/972528751769" class="whatsapp-icon" target="_blank">
         <img src="http://moransabato.local/wp-content/uploads/whatsapp-icon.png" alt="WhatsApp">
     </a>
+    <!-- Call-to-Action Section -->
+    <section class="cta">
+        <h2>יצירת קשר</h2>
+        <p>מתלבטים? צוות המטפלים שלנו כאן בשבילכם. צרו קשר עוד היום ונחזור אליכם בהקדם.</p>
+        <a href="<?php echo site_url('/contact'); ?>" class="cta-button">צור קשר</a>
+    </section>
 </main>
 
 <?php get_footer(); ?>
