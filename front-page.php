@@ -76,4 +76,4 @@
 
 </main>
 <!-- <?php get_footer_front(); ?> -->
-<?php get_template_part('footer', 'home'); ?>
+<?php include locate_template('footer-home.php'); ?>
