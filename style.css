@@ -975,3 +975,49 @@ form fieldset {
     background-color: #D4A59A;
     color: #FFF;
 }
+
+/* General Header Styling */
+.site-header {
+    background-color: #FDF6E3;
+    padding: 10px 20px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.site-logo img,
+.profile-image img {
+    display: block;
+    max-height: 100px;
+}
+
+.main-navigation {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.main-navigation .main-menu {
+    display: inline-flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.main-navigation .main-menu li {
+    margin: 0 15px;
+}
+
+.main-navigation .main-menu li a {
+    text-decoration: none;
+    color: #4A4A4A;
+    font-size: 1.2em;
+}
+
+/* Content Styling */
+.intro-content {
+    background-color: #FFF;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+    line-height: 1.8;
+    font-size: 1.1em;
+}
