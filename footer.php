@@ -1,5 +1,22 @@
 <footer>
-    <p>&copy; <?php echo date("Y"); ?> <?php bloginfo('name'); ?>. All rights reserved.</p>
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <h2>צור קשר</h2>
+        <p>מלאו את הטופס וניצור קשר בהקדם.</p>
+        <form action="<?php echo esc_url($_SERVER['REQUEST_URI']); ?>" method="POST">
+            <label for="name">שם:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">אימייל:</label>
+            <input type="email" id="email" name="email">
+
+            <label for="message">הודעה:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit">שלח</button>
+        </form>
+    </section>
+    <p>&copy; <?php echo date("Y"); ?> מורן סבתו כל הזכויות שמורות 0528-751769 </p>
 </footer>
 <?php wp_footer(); ?>
 <body>
